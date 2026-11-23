@@ -1,0 +1,2207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="STAYNEST - Premium Student Accommodation & Co-Living PG. Fully furnished rooms, chef-curated meals, gigabit Wi-Fi, 24/7 security, and peaceful study environments.">
+  <meta name="keywords" content="STAYNEST, Student PG, Hostel Management, Premium PG, Student Accommodation, Boys PG, Girls PG, Luxury Hostel">
+  <meta name="author" content="B.Tech Web Development Project">
+  <title>STAYNEST | Your Space. Your Comfort. Your Home.</title>
+
+  <!-- Google Fonts: Plus Jakarta Sans & Outfit -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome 6 CDN for modern UI icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <!-- Main Stylesheet -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Top Notification / Academic Banner -->
+  <aside class="academic-banner" aria-label="Academic project notice">
+    <div class="container banner-inner">
+      <span class="badge-academic"><i class="fa-solid fa-graduation-cap"></i> Academic Project</span>
+      <p class="banner-text">
+        <strong>STAYNEST PG Portal:</strong> B.Tech 1st Year Web Development Demonstration • Sample Data &amp; Simulated Management Engine
+      </p>
+      <button class="banner-close-btn" id="closeBannerBtn" aria-label="Dismiss banner">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+    </div>
+  </aside>
+
+  <!-- ==============================================
+       1. NAVIGATION BAR
+       ============================================== -->
+  <header class="site-header" id="siteHeader">
+    <div class="container header-container">
+      <!-- Brand Logo -->
+      <a href="#home" class="brand-logo" aria-label="STAYNEST Homepage">
+        <div class="logo-icon-wrap">
+          <i class="fa-solid fa-feather-pointed logo-feather"></i>
+          <i class="fa-solid fa-house-chimney logo-house"></i>
+        </div>
+        <div class="logo-text-group">
+          <span class="logo-title">STAY<span class="text-emerald">NEST</span></span>
+          <span class="logo-tagline">LUXURY CO-LIVING</span>
+        </div>
+      </a>
+
+      <!-- Desktop Navigation Menu -->
+      <nav class="desktop-nav" aria-label="Main Navigation">
+        <ul class="nav-links">
+          <li><a href="#home" class="nav-link active">Home</a></li>
+          <li><a href="#about" class="nav-link">About</a></li>
+          <li><a href="#rooms" class="nav-link">Rooms</a></li>
+          <li><a href="#facilities" class="nav-link">Facilities</a></li>
+          <li><a href="#menu" class="nav-link">Food Menu</a></li>
+          <li><a href="#rules" class="nav-link">Rules</a></li>
+          <li><a href="#gallery" class="nav-link">Gallery</a></li>
+          <li><a href="#complaints" class="nav-link">Support &amp; Complaints</a></li>
+          <li><a href="#contact" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+
+      <!-- Navigation Actions -->
+      <div class="header-actions">
+        <a href="#enquiry" class="btn btn-emerald btn-sm nav-enquire-btn">
+          <i class="fa-regular fa-paper-plane"></i>
+          <span>Enquire Now</span>
+        </a>
+        <!-- Hamburger Button -->
+        <button class="hamburger-btn" id="hamburgerBtn" aria-label="Toggle mobile menu" aria-expanded="false" aria-controls="mobileDrawer">
+          <span class="bar bar-1"></span>
+          <span class="bar bar-2"></span>
+          <span class="bar bar-3"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Navigation Drawer -->
+  <div class="mobile-nav-backdrop" id="mobileBackdrop"></div>
+  <aside class="mobile-drawer" id="mobileDrawer" aria-hidden="true">
+    <div class="drawer-header">
+      <div class="brand-logo">
+        <div class="logo-icon-wrap">
+          <i class="fa-solid fa-house-chimney"></i>
+        </div>
+        <span class="logo-title">STAY<span class="text-emerald">NEST</span></span>
+      </div>
+      <button class="drawer-close-btn" id="drawerCloseBtn" aria-label="Close menu">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+    </div>
+    <div class="drawer-body">
+      <ul class="drawer-nav-list">
+        <li><a href="#home" class="drawer-link"><i class="fa-solid fa-house"></i> Home</a></li>
+        <li><a href="#about" class="drawer-link"><i class="fa-solid fa-circle-info"></i> About Us</a></li>
+        <li><a href="#rooms" class="drawer-link"><i class="fa-solid fa-bed"></i> Available Rooms</a></li>
+        <li><a href="#facilities" class="drawer-link"><i class="fa-solid fa-dumbbell"></i> Room Facilities</a></li>
+        <li><a href="#menu" class="drawer-link"><i class="fa-solid fa-utensils"></i> Weekly Food Menu</a></li>
+        <li><a href="#rules" class="drawer-link"><i class="fa-solid fa-shield-halved"></i> Hostel Rules</a></li>
+        <li><a href="#gallery" class="drawer-link"><i class="fa-solid fa-images"></i> Photo Gallery</a></li>
+        <li><a href="#enquiry" class="drawer-link"><i class="fa-regular fa-calendar-check"></i> Booking Enquiry</a></li>
+        <li><a href="#complaints" class="drawer-link"><i class="fa-solid fa-headset"></i> Complaint &amp; Support</a></li>
+        <li><a href="#contact" class="drawer-link"><i class="fa-solid fa-location-dot"></i> Contact Us</a></li>
+      </ul>
+      <div class="drawer-footer">
+        <a href="#enquiry" class="btn btn-emerald btn-block" id="drawerEnquireBtn">
+          <i class="fa-solid fa-bolt"></i> Book a Room Tour
+        </a>
+        <div class="drawer-contact-mini">
+          <p><i class="fa-solid fa-phone"></i> +91 98765 43210</p>
+          <p><i class="fa-solid fa-envelope"></i> helpdesk@staynest.demo</p>
+        </div>
+      </div>
+    </div>
+  </aside>
+
+  <!-- ==============================================
+       2. HERO SECTION
+       ============================================== -->
+  <section class="hero-section" id="home">
+    <div class="hero-bg-overlay"></div>
+    <div class="container hero-container">
+      <div class="hero-content">
+        <div class="hero-badge" data-aos="fade-down">
+          <span class="badge-pulse"></span>
+          <span>Admissions Open for Academic Year 2026–27</span>
+        </div>
+        <h1 class="hero-title">
+          Find Your <span class="gradient-text">Perfect Stay</span>
+        </h1>
+        <p class="hero-tagline">Your Space. Your Comfort. Your Home.</p>
+        <p class="hero-desc">
+          Experience upscale student co-living designed for focused studying, warm friendships, and worry-free living. 
+          Featuring hotel-grade orthopaedic beds, chef-curated nutritious meals, gigabit Wi-Fi, and 24/7 biometric security.
+        </p>
+
+        <div class="hero-buttons">
+          <a href="#rooms" class="btn btn-emerald btn-lg">
+            <i class="fa-solid fa-door-open"></i>
+            <span>Explore Rooms</span>
+          </a>
+          <a href="#contact" class="btn btn-outline-white btn-lg">
+            <i class="fa-solid fa-compass"></i>
+            <span>Schedule a Visit</span>
+          </a>
+        </div>
+
+        <!-- Hero Quick Stats / Highlights -->
+        <div class="hero-stats-grid">
+          <div class="stat-card">
+            <div class="stat-icon"><i class="fa-solid fa-users"></i></div>
+            <div class="stat-info">
+              <span class="stat-number">550+</span>
+              <span class="stat-label">Happy Residents</span>
+            </div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-icon"><i class="fa-solid fa-wifi"></i></div>
+            <div class="stat-info">
+              <span class="stat-number">300 Mbps</span>
+              <span class="stat-label">Mesh Gigabit Wi-Fi</span>
+            </div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-icon"><i class="fa-solid fa-bowl-food"></i></div>
+            <div class="stat-info">
+              <span class="stat-number">4 Daily</span>
+              <span class="stat-label">Fresh Chef Meals</span>
+            </div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-icon"><i class="fa-solid fa-star"></i></div>
+            <div class="stat-info">
+              <span class="stat-number">4.9 / 5</span>
+              <span class="stat-label">Google Rating</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Hero Floating Booking Assistant Card -->
+      <div class="hero-booking-widget">
+        <div class="widget-header">
+          <div class="widget-header-title">
+            <i class="fa-solid fa-sliders"></i>
+            <h3>Quick Room Finder</h3>
+          </div>
+          <span class="badge-demo-pill">Live Demo Filter</span>
+        </div>
+        <div class="widget-body">
+          <div class="widget-field">
+            <label for="heroRoomType"><i class="fa-solid fa-bed"></i> Room Type</label>
+            <select id="heroRoomType" class="form-control">
+              <option value="all">All Room Types</option>
+              <option value="single">Single Sharing (Private)</option>
+              <option value="double">Double Sharing (Twin)</option>
+              <option value="triple">Triple Sharing (Trio)</option>
+              <option value="four">Four Sharing (Quad)</option>
+            </select>
+          </div>
+          <div class="widget-field">
+            <label for="heroGender"><i class="fa-solid fa-building-user"></i> Wing / Residence</label>
+            <select id="heroGender" class="form-control">
+              <option value="boys">East Wing (Boys)</option>
+              <option value="girls">West Wing (Girls)</option>
+            </select>
+          </div>
+          <div class="widget-field">
+            <label for="heroAc"><i class="fa-solid fa-snowflake"></i> Climate Control</label>
+            <select id="heroAc" class="form-control">
+              <option value="all">Any (AC / Non-AC)</option>
+              <option value="ac">Air Conditioned Only</option>
+              <option value="non-ac">Non-AC Standard</option>
+            </select>
+          </div>
+          <button type="button" class="btn btn-emerald btn-block" id="heroFilterBtn">
+            <i class="fa-solid fa-magnifying-glass"></i> Check Availability
+          </button>
+          <div class="widget-note">
+            <i class="fa-solid fa-shield-heart"></i>
+            <span>Zero Brokerage • Direct University Partnered PG</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==============================================
+       3. ABOUT US
+       ============================================== -->
+  <section class="section about-section" id="about">
+    <div class="container">
+      <div class="section-header text-center">
+        <span class="section-tag"><i class="fa-solid fa-building-circle-check"></i> WELCOME TO STAYNEST</span>
+        <h2 class="section-title">Designed for Students, Built for Success</h2>
+        <div class="title-divider"></div>
+        <p class="section-subtitle">
+          STAYNEST was founded to replace congested, unhygienic hostels with a serene, modern, and tech-enabled co-living habitat where students thrive academically and socially.
+        </p>
+      </div>
+
+      <div class="about-grid">
+        <!-- About Left Visual Grid -->
+        <div class="about-visuals">
+          <div class="about-img-box img-main">
+            <img src="https://images.unsplash.com/photo-1555854877-bab0e564b8d5?auto=format&fit=crop&w=800&q=80" alt="STAYNEST modern student lounge and living quarters" loading="lazy">
+            <div class="img-badge-floating">
+              <i class="fa-solid fa-medal"></i>
+              <div>
+                <strong>Top Ranked</strong>
+                <span>Student Co-Living 2026</span>
+              </div>
+            </div>
+          </div>
+          <div class="about-img-box img-sub">
+            <img src="https://images.unsplash.com/photo-1522771739844-6a9f6d5f14af?auto=format&fit=crop&w=600&q=80" alt="Clean and comfortable student bedroom" loading="lazy">
+          </div>
+          <div class="about-stat-banner">
+            <div class="stat-number">100%</div>
+            <div class="stat-text">Parental Peace of Mind Guaranteed</div>
+          </div>
+        </div>
+
+        <!-- About Content Right -->
+        <div class="about-content">
+          <div class="about-highlight-pill">
+            <i class="fa-solid fa-sparkles text-emerald"></i>
+            <span>Redefining Student Hospitality</span>
+          </div>
+          <h3 class="about-lead">A Safe, Vibrant &amp; High-Productivity Second Home</h3>
+          <p class="about-p">
+            Moving away from home for college is a monumental milestone. At STAYNEST, we eliminate daily friction—from housekeeping hassles and grocery runs to unreliable internet—so you can concentrate 100% on your engineering projects, assignments, and personal growth.
+          </p>
+
+          <!-- Core Value Cards -->
+          <div class="about-features-list">
+            <div class="about-feature-item">
+              <div class="feature-icon-box">
+                <i class="fa-solid fa-shield-halved"></i>
+              </div>
+              <div class="feature-text-box">
+                <h4>3-Tier Security &amp; Biometrics</h4>
+                <p>24x7 CCTV coverage, biometric digital turnstiles, and trained security personnel on duty day and night.</p>
+              </div>
+            </div>
+
+            <div class="about-feature-item">
+              <div class="feature-icon-box">
+                <i class="fa-solid fa-pump-soap"></i>
+              </div>
+              <div class="feature-text-box">
+                <h4>Daily Hospital-Grade Sanitization</h4>
+                <p>Professional in-house housekeeping team sanitizes private rooms, shared bathrooms, and study spaces daily.</p>
+              </div>
+            </div>
+
+            <div class="about-feature-item">
+              <div class="feature-icon-box">
+                <i class="fa-solid fa-book-open-reader"></i>
+              </div>
+              <div class="feature-text-box">
+                <h4>Quiet Ergonomic Study Zones</h4>
+                <p>Acoustically treated 24-hour reading rooms with high-speed charging sockets and ergonomic Herman Miller inspired seating.</p>
+              </div>
+            </div>
+
+            <div class="about-feature-item">
+              <div class="feature-icon-box">
+                <i class="fa-solid fa-handshake-angle"></i>
+              </div>
+              <div class="feature-text-box">
+                <h4>Warm Student Community</h4>
+                <p>Weekly movie nights, festival celebrations, coding jam sessions, and indoor games to foster lifetime friendships.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="about-cta-row">
+            <a href="#rooms" class="btn btn-emerald">
+              <span>View Accommodations</span>
+              <i class="fa-solid fa-arrow-right"></i>
+            </a>
+            <div class="warden-signature">
+              <i class="fa-solid fa-circle-check text-emerald"></i>
+              <span>Approved &amp; Certified by University Board</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==============================================
+       4. AVAILABLE ROOMS
+       ============================================== -->
+  <section class="section rooms-section" id="rooms">
+    <div class="container">
+      <div class="section-header text-center">
+        <span class="section-tag"><i class="fa-solid fa-door-closed"></i> SELECT YOUR SPACE</span>
+        <h2 class="section-title">Fully Furnished Accommodation Plans</h2>
+        <div class="title-divider"></div>
+        <p class="section-subtitle">
+          Choose from private solo sanctuaries to lively shared studios. All pricing includes electricity backup, Wi-Fi, housekeeping, and 4 daily meals.
+        </p>
+        <div class="demo-data-badge">
+          <i class="fa-solid fa-circle-info"></i>
+          <span>Academic Project Demonstration: Sample pricing in INR and simulated availability.</span>
+        </div>
+      </div>
+
+      <!-- Room Filter Toolbar -->
+      <div class="room-filters-bar">
+        <!-- Sharing Type Filters -->
+        <div class="filter-group type-filter-buttons" role="tablist" aria-label="Room Type Filters">
+          <button class="filter-btn active" data-filter="all">All Rooms (<span id="countAll">6</span>)</button>
+          <button class="filter-btn" data-filter="single">Single Sharing</button>
+          <button class="filter-btn" data-filter="double">Double Sharing</button>
+          <button class="filter-btn" data-filter="triple">Triple Sharing</button>
+          <button class="filter-btn" data-filter="four">Four Sharing</button>
+        </div>
+
+        <!-- Additional Filters: Availability & AC -->
+        <div class="filter-dropdowns">
+          <div class="filter-select-wrapper">
+            <label for="availabilityFilter" class="sr-only">Availability Filter</label>
+            <select id="availabilityFilter" class="filter-select">
+              <option value="all">All Availabilities</option>
+              <option value="available">Available Only</option>
+              <option value="filling">Filling Fast Only</option>
+              <option value="occupied">Occupied (Waitlist)</option>
+            </select>
+          </div>
+
+          <div class="filter-select-wrapper">
+            <label for="priceSort" class="sr-only">Sort by Price</label>
+            <select id="priceSort" class="filter-select">
+              <option value="default">Sort by: Default</option>
+              <option value="low-high">Rent: Low to High</option>
+              <option value="high-low">Rent: High to Low</option>
+            </select>
+          </div>
+        </div>
+      </div>
+
+      <!-- Room Cards Grid -->
+      <div class="rooms-grid" id="roomsGrid">
+        <!-- Room 1: Single Sharing Deluxe (AC) -->
+        <article class="room-card" data-type="single" data-status="available" data-price="16500" data-ac="yes">
+          <div class="room-card-header">
+            <div class="room-img-wrapper">
+              <img src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=700&q=80" alt="Single Sharing Deluxe Private Room with study desk and balcony" loading="lazy">
+              <span class="room-badge badge-popular"><i class="fa-solid fa-fire"></i> Most Popular</span>
+              <span class="room-status-badge status-available"><i class="fa-solid fa-circle-check"></i> Available (1 Bed Left)</span>
+            </div>
+          </div>
+          <div class="room-card-body">
+            <div class="room-meta-top">
+              <span class="room-occupancy"><i class="fa-solid fa-user"></i> 1 Resident (Private Room)</span>
+              <span class="room-wing"><i class="fa-solid fa-compass"></i> East / West Wing</span>
+            </div>
+            <h3 class="room-title">Single Sharing Deluxe Suite</h3>
+            <p class="room-desc">Ideal for students seeking supreme privacy, absolute quiet, and zero disturbance for high-focus academic preparation.</p>
+            
+            <div class="room-price-box">
+              <div class="price-main">
+                <span class="currency">₹</span>
+                <span class="amount">16,500</span>
+                <span class="period">/ month</span>
+              </div>
+              <div class="price-sub">Includes 4 meals + Laundry + AC</div>
+            </div>
+
+            <div class="room-amenities-tags">
+              <span class="tag"><i class="fa-solid fa-snowflake"></i> Inverter AC</span>
+              <span class="tag"><i class="fa-solid fa-bath"></i> Attached Bath</span>
+              <span class="tag"><i class="fa-solid fa-wifi"></i> Gigabit Wi-Fi</span>
+              <span class="tag"><i class="fa-solid fa-chair"></i> Study Desk &amp; Lamp</span>
+              <span class="tag"><i class="fa-solid fa-door-closed"></i> Double Wardrobe</span>
+            </div>
+
+            <div class="room-card-actions">
+              <button class="btn btn-outline-emerald btn-sm view-details-btn" data-room-id="room-1">
+                <i class="fa-solid fa-eye"></i> View Details
+              </button>
+              <button class="btn btn-emerald btn-sm enquire-room-btn" data-room-name="Single Sharing Deluxe Suite" data-room-price="16500">
+                <i class="fa-regular fa-paper-plane"></i> Enquire Now
+              </button>
+            </div>
+          </div>
+        </article>
+
+        <!-- Room 2: Double Sharing Studio -->
+        <article class="room-card" data-type="double" data-status="available" data-price="10800" data-ac="yes">
+          <div class="room-card-header">
+            <div class="room-img-wrapper">
+              <img src="https://images.unsplash.com/photo-1595526114035-0d45ed16cfbf?auto=format&fit=crop&w=700&q=80" alt="Double Sharing Studio with twin beds and modern aesthetic" loading="lazy">
+              <span class="room-badge badge-bestseller"><i class="fa-solid fa-thumbs-up"></i> Best Value</span>
+              <span class="room-status-badge status-available"><i class="fa-solid fa-circle-check"></i> Available (3 Beds Left)</span>
+            </div>
+          </div>
+          <div class="room-card-body">
+            <div class="room-meta-top">
+              <span class="room-occupancy"><i class="fa-solid fa-user-group"></i> 2 Residents (Twin Sharing)</span>
+              <span class="room-wing"><i class="fa-solid fa-compass"></i> All Wings</span>
+            </div>
+            <h3 class="room-title">Double Sharing Studio</h3>
+            <p class="room-desc">Balanced combination of companionship and personal study space with independent storage and desks for each resident.</p>
+            
+            <div class="room-price-box">
+              <div class="price-main">
+                <span class="currency">₹</span>
+                <span class="amount">10,800</span>
+                <span class="period">/ month</span>
+              </div>
+              <div class="price-sub">Includes 4 meals + Wi-Fi + Daily Cleaning</div>
+            </div>
+
+            <div class="room-amenities-tags">
+              <span class="tag"><i class="fa-solid fa-snowflake"></i> AC Available</span>
+              <span class="tag"><i class="fa-solid fa-bath"></i> Attached Washroom</span>
+              <span class="tag"><i class="fa-solid fa-table"></i> Dual Study Tables</span>
+              <span class="tag"><i class="fa-solid fa-shirt"></i> Separate Closets</span>
+              <span class="tag"><i class="fa-solid fa-shield"></i> Bio Lockers</span>
+            </div>
+
+            <div class="room-card-actions">
+              <button class="btn btn-outline-emerald btn-sm view-details-btn" data-room-id="room-2">
+                <i class="fa-solid fa-eye"></i> View Details
+              </button>
+              <button class="btn btn-emerald btn-sm enquire-room-btn" data-room-name="Double Sharing Studio" data-room-price="10800">
+                <i class="fa-regular fa-paper-plane"></i> Enquire Now
+              </button>
+            </div>
+          </div>
+        </article>
+
+        <!-- Room 3: Triple Sharing Classic -->
+        <article class="room-card" data-type="triple" data-status="filling" data-price="8200" data-ac="yes">
+          <div class="room-card-header">
+            <div class="room-img-wrapper">
+              <img src="https://images.unsplash.com/photo-1540518614846-7ede433c4570?auto=format&fit=crop&w=700&q=80" alt="Triple Sharing Room with 3 beds and ample natural lighting" loading="lazy">
+              <span class="room-status-badge status-filling"><i class="fa-solid fa-clock"></i> Filling Fast (2 Beds Left)</span>
+            </div>
+          </div>
+          <div class="room-card-body">
+            <div class="room-meta-top">
+              <span class="room-occupancy"><i class="fa-solid fa-people-group"></i> 3 Residents (Trio Room)</span>
+              <span class="room-wing"><i class="fa-solid fa-compass"></i> East &amp; West Wing</span>
+            </div>
+            <h3 class="room-title">Triple Sharing Classic</h3>
+            <p class="room-desc">Spacious and breezy setup featuring individual orthopaedic beds, three dedicated study corners, and private cupboards.</p>
+            
+            <div class="room-price-box">
+              <div class="price-main">
+                <span class="currency">₹</span>
+                <span class="amount">8,200</span>
+                <span class="period">/ month</span>
+              </div>
+              <div class="price-sub">Includes 4 meals + High-Speed Wi-Fi</div>
+            </div>
+
+            <div class="room-amenities-tags">
+              <span class="tag"><i class="fa-solid fa-fan"></i> High-Speed Fans/AC</span>
+              <span class="tag"><i class="fa-solid fa-bath"></i> Spacious Bathroom</span>
+              <span class="tag"><i class="fa-solid fa-wifi"></i> Mesh Wi-Fi 6</span>
+              <span class="tag"><i class="fa-solid fa-plug"></i> USB Charging Points</span>
+              <span class="tag"><i class="fa-solid fa-broom"></i> Daily Maid Service</span>
+            </div>
+
+            <div class="room-card-actions">
+              <button class="btn btn-outline-emerald btn-sm view-details-btn" data-room-id="room-3">
+                <i class="fa-solid fa-eye"></i> View Details
+              </button>
+              <button class="btn btn-emerald btn-sm enquire-room-btn" data-room-name="Triple Sharing Classic" data-room-price="8200">
+                <i class="fa-regular fa-paper-plane"></i> Enquire Now
+              </button>
+            </div>
+          </div>
+        </article>
+
+        <!-- Room 4: Four Sharing Quad (Budget Friendly) -->
+        <article class="room-card" data-type="four" data-status="available" data-price="6200" data-ac="no">
+          <div class="room-card-header">
+            <div class="room-img-wrapper">
+              <img src="https://images.unsplash.com/photo-1555854877-bab0e564b8d5?auto=format&fit=crop&w=700&q=80" alt="Four Sharing Quad Room budget friendly student room" loading="lazy">
+              <span class="room-badge badge-budget"><i class="fa-solid fa-piggy-bank"></i> Pocket Friendly</span>
+              <span class="room-status-badge status-available"><i class="fa-solid fa-circle-check"></i> Available (4 Beds Left)</span>
+            </div>
+          </div>
+          <div class="room-card-body">
+            <div class="room-meta-top">
+              <span class="room-occupancy"><i class="fa-solid fa-users"></i> 4 Residents (Quad Sharing)</span>
+              <span class="room-wing"><i class="fa-solid fa-compass"></i> Ground &amp; 1st Floor</span>
+            </div>
+            <h3 class="room-title">Four Sharing Quad</h3>
+            <p class="room-desc">Maximum affordability without compromising comfort. Large multi-room layout with individual reading lights and large lockers.</p>
+            
+            <div class="room-price-box">
+              <div class="price-main">
+                <span class="currency">₹</span>
+                <span class="amount">6,200</span>
+                <span class="period">/ month</span>
+              </div>
+              <div class="price-sub">Includes 4 meals + RO Water + Wi-Fi</div>
+            </div>
+
+            <div class="room-amenities-tags">
+              <span class="tag"><i class="fa-solid fa-bed"></i> 4 Single Beds</span>
+              <span class="tag"><i class="fa-solid fa-vault"></i> Keyed Steel Lockers</span>
+              <span class="tag"><i class="fa-solid fa-shower"></i> Geyser Fitted Bath</span>
+              <span class="tag"><i class="fa-solid fa-bolt"></i> 24/7 Power Backup</span>
+              <span class="tag"><i class="fa-solid fa-shirt"></i> Free Laundry Wash</span>
+            </div>
+
+            <div class="room-card-actions">
+              <button class="btn btn-outline-emerald btn-sm view-details-btn" data-room-id="room-4">
+                <i class="fa-solid fa-eye"></i> View Details
+              </button>
+              <button class="btn btn-emerald btn-sm enquire-room-btn" data-room-name="Four Sharing Quad" data-room-price="6200">
+                <i class="fa-regular fa-paper-plane"></i> Enquire Now
+              </button>
+            </div>
+          </div>
+        </article>
+
+        <!-- Room 5: Single Sharing Executive (Balcony View) -->
+        <article class="room-card" data-type="single" data-status="occupied" data-price="18500" data-ac="yes">
+          <div class="room-card-header">
+            <div class="room-img-wrapper">
+              <img src="https://images.unsplash.com/photo-1598928506311-c55ded91a20c?auto=format&fit=crop&w=700&q=80" alt="Executive Single Sharing Room with private balcony" loading="lazy">
+              <span class="room-badge badge-premium"><i class="fa-solid fa-crown"></i> Executive</span>
+              <span class="room-status-badge status-occupied"><i class="fa-solid fa-ban"></i> Occupied (Waitlist Open)</span>
+            </div>
+          </div>
+          <div class="room-card-body">
+            <div class="room-meta-top">
+              <span class="room-occupancy"><i class="fa-solid fa-user"></i> 1 Resident (Penthouse Floor)</span>
+              <span class="room-wing"><i class="fa-solid fa-compass"></i> Top Floor Corner</span>
+            </div>
+            <h3 class="room-title">Single Executive Penthouse</h3>
+            <p class="room-desc">Our flagship single room featuring a scenic private garden balcony, mini-refrigerator, smart LED TV, and king single bed.</p>
+            
+            <div class="room-price-box">
+              <div class="price-main">
+                <span class="currency">₹</span>
+                <span class="amount">18,500</span>
+                <span class="period">/ month</span>
+              </div>
+              <div class="price-sub">All-inclusive VIP student suite</div>
+            </div>
+
+            <div class="room-amenities-tags">
+              <span class="tag"><i class="fa-solid fa-mountain-sun"></i> Private Balcony</span>
+              <span class="tag"><i class="fa-solid fa-tv"></i> Smart TV</span>
+              <span class="tag"><i class="fa-solid fa-snowflake"></i> Inverter AC</span>
+              <span class="tag"><i class="fa-solid fa-cubes-stacked"></i> Mini Fridge</span>
+              <span class="tag"><i class="fa-solid fa-couch"></i> Recliner Chair</span>
+            </div>
+
+            <div class="room-card-actions">
+              <button class="btn btn-outline-emerald btn-sm view-details-btn" data-room-id="room-5">
+                <i class="fa-solid fa-eye"></i> View Details
+              </button>
+              <button class="btn btn-secondary btn-sm enquire-room-btn" data-room-name="Single Executive Penthouse" data-room-price="18500">
+                <i class="fa-regular fa-bell"></i> Join Waitlist
+              </button>
+            </div>
+          </div>
+        </article>
+
+        <!-- Room 6: Double Sharing Premium AC -->
+        <article class="room-card" data-type="double" data-status="available" data-price="12500" data-ac="yes">
+          <div class="room-card-header">
+            <div class="room-img-wrapper">
+              <img src="https://images.unsplash.com/photo-1590490360182-c33d57733427?auto=format&fit=crop&w=700&q=80" alt="Double Sharing Premium Room with stylish modern lighting" loading="lazy">
+              <span class="room-status-badge status-available"><i class="fa-solid fa-circle-check"></i> Available (2 Beds Left)</span>
+            </div>
+          </div>
+          <div class="room-card-body">
+            <div class="room-meta-top">
+              <span class="room-occupancy"><i class="fa-solid fa-user-group"></i> 2 Residents (Double Premium)</span>
+              <span class="room-wing"><i class="fa-solid fa-compass"></i> West Wing (Quiet Zone)</span>
+            </div>
+            <h3 class="room-title">Double Sharing Premium AC</h3>
+            <p class="room-desc">Large carpet area, floor-to-ceiling wooden wardrobes, split air-conditioner, and sound-insulated double glass windows.</p>
+            
+            <div class="room-price-box">
+              <div class="price-main">
+                <span class="currency">₹</span>
+                <span class="amount">12,500</span>
+                <span class="period">/ month</span>
+              </div>
+              <div class="price-sub">Includes 4 meals + AC + Laundry</div>
+            </div>
+
+            <div class="room-amenities-tags">
+              <span class="tag"><i class="fa-solid fa-snowflake"></i> 1.5 Ton Split AC</span>
+              <span class="tag"><i class="fa-solid fa-bath"></i> Luxury Bathroom</span>
+              <span class="tag"><i class="fa-solid fa-table"></i> Executive Desks</span>
+              <span class="tag"><i class="fa-solid fa-rug"></i> Wooden Flooring</span>
+              <span class="tag"><i class="fa-solid fa-bell-concierge"></i> Priority Service</span>
+            </div>
+
+            <div class="room-card-actions">
+              <button class="btn btn-outline-emerald btn-sm view-details-btn" data-room-id="room-6">
+                <i class="fa-solid fa-eye"></i> View Details
+              </button>
+              <button class="btn btn-emerald btn-sm enquire-room-btn" data-room-name="Double Sharing Premium AC" data-room-price="12500">
+                <i class="fa-regular fa-paper-plane"></i> Enquire Now
+              </button>
+            </div>
+          </div>
+        </article>
+      </div>
+
+      <!-- No Rooms Found Message (JS driven) -->
+      <div class="no-results-msg" id="noRoomsMsg" style="display: none;">
+        <i class="fa-solid fa-magnifying-glass-location"></i>
+        <h3>No matching rooms found</h3>
+        <p>Try resetting the availability or sharing type filter to view all rooms.</p>
+        <button class="btn btn-emerald btn-sm" id="resetRoomFiltersBtn">Reset Filters</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==============================================
+       5. ROOM FACILITIES
+       ============================================== -->
+  <section class="section facilities-section" id="facilities">
+    <div class="container">
+      <div class="section-header text-center">
+        <span class="section-tag"><i class="fa-solid fa-award"></i> WORLD-CLASS INFRASTRUCTURE</span>
+        <h2 class="section-title">All-Inclusive Living Amenities</h2>
+        <div class="title-divider"></div>
+        <p class="section-subtitle">
+          Everything you need under one roof. No hidden utility bills, no surprise maintenance charges.
+        </p>
+      </div>
+
+      <div class="facilities-grid">
+        <!-- Facility 1: High Speed Wi-Fi -->
+        <div class="facility-card">
+          <div class="facility-icon-wrap icon-wifi">
+            <i class="fa-solid fa-wifi"></i>
+          </div>
+          <h3 class="facility-title">Gigabit Wi-Fi 6</h3>
+          <p class="facility-desc">300 Mbps dual-band optical mesh routers on every corridor. Zero buffering for lecture streaming, coding, and gaming.</p>
+          <span class="facility-pill"><i class="fa-solid fa-bolt"></i> 99.9% Uptime</span>
+        </div>
+
+        <!-- Facility 2: Air Conditioning -->
+        <div class="facility-card">
+          <div class="facility-icon-wrap icon-ac">
+            <i class="fa-solid fa-snowflake"></i>
+          </div>
+          <h3 class="facility-title">Smart Air Conditioning</h3>
+          <p class="facility-desc">Energy-efficient 5-star inverter air conditioners in all AC rooms for pleasant sleep during sweltering summer months.</p>
+          <span class="facility-pill"><i class="fa-solid fa-temperature-arrow-down"></i> Climate Control</span>
+        </div>
+
+        <!-- Facility 3: Comfortable Orthopaedic Beds -->
+        <div class="facility-card">
+          <div class="facility-icon-wrap icon-bed">
+            <i class="fa-solid fa-bed"></i>
+          </div>
+          <h3 class="facility-title">Orthopaedic Mattresses</h3>
+          <p class="facility-desc">Premium 8-inch high-density spine-support memory foam mattresses with hygienic anti-microbial covers and bedspreads.</p>
+          <span class="facility-pill"><i class="fa-solid fa-moon"></i> Sleep Soundly</span>
+        </div>
+
+        <!-- Facility 4: Study Tables -->
+        <div class="facility-card">
+          <div class="facility-icon-wrap icon-study">
+            <i class="fa-solid fa-book-open"></i>
+          </div>
+          <h3 class="facility-title">Dedicated Study Pods</h3>
+          <p class="facility-desc">Ergonomic study desks, pin-up boards, reading LED lamps, and dedicated universal power outlets for your laptops and gadgets.</p>
+          <span class="facility-pill"><i class="fa-solid fa-lightbulb"></i> Study Ready</span>
+        </div>
+
+        <!-- Facility 5: Wardrobes -->
+        <div class="facility-card">
+          <div class="facility-icon-wrap icon-wardrobe">
+            <i class="fa-solid fa-door-closed"></i>
+          </div>
+          <h3 class="facility-title">Personal Secure Wardrobes</h3>
+          <p class="facility-desc">Full-length engineered wood closets with hanger compartments, shoe racks, and secure internal safety lock-boxes.</p>
+          <span class="facility-pill"><i class="fa-solid fa-lock"></i> Digital &amp; Key Lock</span>
+        </div>
+
+        <!-- Facility 6: Laundry -->
+        <div class="facility-card">
+          <div class="facility-icon-wrap icon-laundry">
+            <i class="fa-solid fa-shirt"></i>
+          </div>
+          <h3 class="facility-title">In-House Laundry &amp; Ironing</h3>
+          <p class="facility-desc">Automated commercial front-load washing machines, dryers, and twice-weekly professional steam ironing service.</p>
+          <span class="facility-pill"><i class="fa-solid fa-clock-rotate-left"></i> 24h Turnaround</span>
+        </div>
+
+        <!-- Facility 7: Drinking Water -->
+        <div class="facility-card">
+          <div class="facility-icon-wrap icon-water">
+            <i class="fa-solid fa-glass-water"></i>
+          </div>
+          <h3 class="facility-title">Multi-Stage RO Alkaline Water</h3>
+          <p class="facility-desc">7-stage RO + UV purification stations with hot, cold, and ambient water dispensers installed on each residential floor.</p>
+          <span class="facility-pill"><i class="fa-solid fa-droplet"></i> TDS Certified Safe</span>
+        </div>
+
+        <!-- Facility 8: Housekeeping -->
+        <div class="facility-card">
+          <div class="facility-icon-wrap icon-clean">
+            <i class="fa-solid fa-broom"></i>
+          </div>
+          <h3 class="facility-title">Daily Housekeeping</h3>
+          <p class="facility-desc">Spotless room sweep, mopping with herbal disinfectants, deep bathroom scrubbing, and daily trash removal service.</p>
+          <span class="facility-pill"><i class="fa-solid fa-sparkles"></i> 7 Days a Week</span>
+        </div>
+
+        <!-- Facility 9: CCTV/Security -->
+        <div class="facility-card">
+          <div class="facility-icon-wrap icon-security">
+            <i class="fa-solid fa-shield-virus"></i>
+          </div>
+          <h3 class="facility-title">Biometric &amp; CCTV Security</h3>
+          <p class="facility-desc">72 high-definition night vision CCTV cameras covering common areas, perimeter walls, plus biometric fingerprint turnstiles.</p>
+          <span class="facility-pill"><i class="fa-solid fa-camera"></i> 24x7 Monitoring</span>
+        </div>
+
+        <!-- Facility 10: Common Areas & Lounge -->
+        <div class="facility-card">
+          <div class="facility-icon-wrap icon-lounge">
+            <i class="fa-solid fa-gamepad"></i>
+          </div>
+          <h3 class="facility-title">Recreation &amp; Gaming Lounge</h3>
+          <p class="facility-desc">Chic communal lounge with Sony PlayStation 5, foosball table, ping pong, community library, beanbags, and 75-inch smart screen.</p>
+          <span class="facility-pill"><i class="fa-solid fa-champagne-glasses"></i> Community Hub</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==============================================
+       6. FOOD AND DAILY MENU
+       ============================================== -->
+  <section class="section menu-section" id="menu">
+    <div class="container">
+      <div class="section-header text-center">
+        <span class="section-tag"><i class="fa-solid fa-plate-wheat"></i> TASTE LIKE HOME</span>
+        <h2 class="section-title">Weekly Chef-Curated Food Menu</h2>
+        <div class="title-divider"></div>
+        <p class="section-subtitle">
+          Healthy, hygienic, and delectable 4-meal cycle prepared by certified chefs in an FSSAI approved kitchen. North and South Indian favorites with special Sunday feasts.
+        </p>
+      </div>
+
+      <!-- Meal Timings Notice -->
+      <div class="meal-timings-strip">
+        <div class="timing-col">
+          <i class="fa-solid fa-mug-saucer"></i>
+          <div>
+            <strong>Breakfast:</strong>
+            <span>07:30 AM – 09:30 AM</span>
+          </div>
+        </div>
+        <div class="timing-col">
+          <i class="fa-solid fa-bowl-rice"></i>
+          <div>
+            <strong>Lunch:</strong>
+            <span>12:30 PM – 02:30 PM</span>
+          </div>
+        </div>
+        <div class="timing-col">
+          <i class="fa-solid fa-cookie-bite"></i>
+          <div>
+            <strong>Evening Snacks:</strong>
+            <span>05:00 PM – 06:30 PM</span>
+          </div>
+        </div>
+        <div class="timing-col">
+          <i class="fa-solid fa-utensils"></i>
+          <div>
+            <strong>Dinner:</strong>
+            <span>08:00 PM – 10:00 PM</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Day Tabs Switcher -->
+      <div class="menu-tabs-wrapper" role="tablist" aria-label="Days of the Week">
+        <button class="day-tab active" data-day="monday">Monday</button>
+        <button class="day-tab" data-day="tuesday">Tuesday</button>
+        <button class="day-tab" data-day="wednesday">Wednesday</button>
+        <button class="day-tab" data-day="thursday">Thursday</button>
+        <button class="day-tab" data-day="friday">Friday</button>
+        <button class="day-tab" data-day="saturday">Saturday</button>
+        <button class="day-tab" data-day="sunday">Sunday <span class="badge-feast">Feast</span></button>
+      </div>
+
+      <!-- Day Menu Cards Container (JS Controlled) -->
+      <div class="menu-content-container" id="menuContentContainer">
+        <!-- Dynamically rendered via JS or static cards shown/hidden by day class -->
+        
+        <!-- MONDAY -->
+        <div class="day-menu-panel active" id="menu-monday">
+          <div class="menu-day-banner">
+            <h3><i class="fa-solid fa-calendar-day"></i> Monday Dining Schedule</h3>
+            <span class="diet-tag"><i class="fa-solid fa-leaf text-emerald"></i> 100% Pure Veg Day (Jain options on request)</span>
+          </div>
+          <div class="meals-grid">
+            <div class="meal-card">
+              <div class="meal-card-header">
+                <span class="meal-badge"><i class="fa-solid fa-sun"></i> Breakfast</span>
+                <span class="meal-time">7:30 - 9:30 AM</span>
+              </div>
+              <ul class="meal-items-list">
+                <li><i class="fa-solid fa-check"></i> Masala Poha with Crunchy Peanuts &amp; Sev</li>
+                <li><i class="fa-solid fa-check"></i> Steamed Idli &amp; Sambar with Coconut Chutney</li>
+                <li><i class="fa-solid fa-check"></i> Boiled Eggs / Fresh Banana</li>
+                <li><i class="fa-solid fa-check"></i> Hot Filter Coffee / Ginger Tea / Milk</li>
+              </ul>
+            </div>
+
+            <div class="meal-card">
+              <div class="meal-card-header">
+                <span class="meal-badge"><i class="fa-solid fa-sun-plant-wilt"></i> Lunch</span>
+                <span class="meal-time">12:30 - 2:30 PM</span>
+              </div>
+              <ul class="meal-items-list">
+                <li><i class="fa-solid fa-check"></i> Paneer Butter Masala (Cottage Cheese)</li>
+                <li><i class="fa-solid fa-check"></i> Yellow Dal Tadka with Desi Ghee</li>
+                <li><i class="fa-solid fa-check"></i> Phulka Rotis (Whole Wheat) &amp; Jeera Rice</li>
+                <li><i class="fa-solid fa-check"></i> Boondi Raita, Green Salad &amp; Roasted Papad</li>
+              </ul>
+            </div>
+
+            <div class="meal-card">
+              <div class="meal-card-header">
+                <span class="meal-badge"><i class="fa-solid fa-cloud-sun"></i> Evening Snacks</span>
+                <span class="meal-time">5:00 - 6:30 PM</span>
+              </div>
+              <ul class="meal-items-list">
+                <li><i class="fa-solid fa-check"></i> Crispy Veg Cutlets with Mint Sauce</li>
+                <li><i class="fa-solid fa-check"></i> Cream Biscuits &amp; Rusks</li>
+                <li><i class="fa-solid fa-check"></i> Masala Chai / Filter Coffee / Bournvita</li>
+              </ul>
+            </div>
+
+            <div class="meal-card">
+              <div class="meal-card-header">
+                <span class="meal-badge"><i class="fa-solid fa-moon"></i> Dinner</span>
+                <span class="meal-time">8:00 - 10:00 PM</span>
+              </div>
+              <ul class="meal-items-list">
+                <li><i class="fa-solid fa-check"></i> Aloo Gobi Matar Dry Masala</li>
+                <li><i class="fa-solid fa-check"></i> Punjabi Dal Makhani (Slow-Cooked)</li>
+                <li><i class="fa-solid fa-check"></i> Fresh Tawa Rotis with Butter</li>
+                <li><i class="fa-solid fa-check"></i> Steamed Basmati Rice &amp; Sweet Kheer</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- TUESDAY -->
+        <div class="day-menu-panel" id="menu-tuesday">
+          <div class="menu-day-banner">
+            <h3><i class="fa-solid fa-calendar-day"></i> Tuesday Dining Schedule</h3>
+            <span class="diet-tag"><i class="fa-solid fa-heart-pulse text-emerald"></i> High Protein Power Tuesday</span>
+          </div>
+          <div class="meals-grid">
+            <div class="meal-card">
+              <div class="meal-card-header">
+                <span class="meal-badge"><i class="fa-solid fa-sun"></i> Breakfast</span>
+                <span class="meal-time">7:30 - 9:30 AM</span>
+              </div>
+              <ul class="meal-items-list">
+                <li><i class="fa-solid fa-check"></i> Crispy Masala Dosa with Potato Mash</li>
+                <li><i class="fa-solid fa-check"></i> Tomato Onion Uttapam &amp; Sambar</li>
+                <li><i class="fa-solid fa-check"></i> Cornflakes with Warm Milk &amp; Honey</li>
+                <li><i class="fa-solid fa-check"></i> Assam Kadak Chai / Coffee</li>
+              </ul>
+            </div>
+
+            <div class="meal-card">
+              <div class="meal-card-header">
+                <span class="meal-badge"><i class="fa-solid fa-sun-plant-wilt"></i> Lunch</span>
+                <span class="meal-time">12:30 - 2:30 PM</span>
+              </div>
+              <ul class="meal-items-list">
+                <li><i class="fa-solid fa-check"></i> Authentic Punjabi Rajma (Kidney Beans)</li>
+                <li><i class="fa-solid fa-check"></i> Mixed Vegetable Korma / Bhindi Do Pyaza</li>
+                <li><i class="fa-solid fa-check"></i> Steamed Fragrant Basmati Rice</li>
+                <li><i class="fa-solid fa-check"></i> Soft Butter Phulkas, Curd &amp; Mango Pickle</li>
+              </ul>
+            </div>
+
+            <div class="meal-card">
+              <div class="meal-card-header">
+                <span class="meal-badge"><i class="fa-solid fa-cloud-sun"></i> Evening Snacks</span>
+                <span class="meal-time">5:00 - 6:30 PM</span>
+              </div>
+              <ul class="meal-items-list">
+                <li><i class="fa-solid fa-check"></i> Golden Onion Pakoras with Tamarind Chutney</li>
+                <li><i class="fa-solid fa-check"></i> Salted Peanuts &amp; Wafers</li>
+                <li><i class="fa-solid fa-check"></i> Cardamom Tea / Bru Coffee</li>
+              </ul>
+            </div>
+
+            <div class="meal-card">
+              <div class="meal-card-header">
+                <span class="meal-badge"><i class="fa-solid fa-moon"></i> Dinner</span>
+                <span class="meal-time">8:00 - 10:00 PM</span>
+              </div>
+              <ul class="meal-items-list">
+                <li><i class="fa-solid fa-check"></i> Kadai Paneer / Soya Chaap Curry</li>
+                <li><i class="fa-solid fa-check"></i> Moong Dal Dhaba Style</li>
+                <li><i class="fa-solid fa-check"></i> Hot Butter Rotis &amp; Jeera Pulao</li>
+                <li><i class="fa-solid fa-check"></i> Hot Gulab Jamun (2 pcs per resident)</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- WEDNESDAY -->
+        <div class="day-menu-panel" id="menu-wednesday">
+          <div class="menu-day-banner">
+            <h3><i class="fa-solid fa-calendar-day"></i> Wednesday Dining Schedule</h3>
+            <span class="diet-tag"><i class="fa-solid fa-drumstick-bite text-amber"></i> Non-Veg &amp; Veg Options Available</span>
+          </div>
+          <div class="meals-grid">
+            <div class="meal-card">
+              <div class="meal-card-header"><span class="meal-badge"><i class="fa-solid fa-sun"></i> Breakfast</span><span class="meal-time">7:30 - 9:30 AM</span></div>
+              <ul class="meal-items-list">
+                <li><i class="fa-solid fa-check"></i> Amritsari Aloo Paratha with Amul Butter</li>
+                <li><i class="fa-solid fa-check"></i> Curd, Pickles &amp; Green Chutney</li>
+                <li><i class="fa-solid fa-check"></i> Scrambled Eggs (Bhurji) or Veg Upma</li>
+                <li><i class="fa-solid fa-check"></i> Special Masala Tea / Coffee</li>
+              </ul>
+            </div>
+            <div class="meal-card">
+              <div class="meal-card-header"><span class="meal-badge"><i class="fa-solid fa-sun-plant-wilt"></i> Lunch</span><span class="meal-time">12:30 - 2:30 PM</span></div>
+              <ul class="meal-items-list">
+                <li><i class="fa-solid fa-check"></i> Pindi Chole (Chickpeas) with Bhature / Puri</li>
+                <li><i class="fa-solid fa-check"></i> Kashmiri Dum Aloo</li>
+                <li><i class="fa-solid fa-check"></i> Veg Pulao &amp; Onion Mint Salad</li>
+                <li><i class="fa-solid fa-check"></i> Sweet Lassi or Buttermilk</li>
+              </ul>
+            </div>
+            <div class="meal-card">
+              <div class="meal-card-header"><span class="meal-badge"><i class="fa-solid fa-cloud-sun"></i> Evening Snacks</span><span class="meal-time">5:00 - 6:30 PM</span></div>
+              <ul class="meal-items-list">
+                <li><i class="fa-solid fa-check"></i> Fresh Grilled Veg Sandwiches</li>
+                <li><i class="fa-solid fa-check"></i> Potato Chips &amp; Tomato Ketchup</li>
+                <li><i class="fa-solid fa-check"></i> Hot Ginger Tea &amp; Coffee</li>
+              </ul>
+            </div>
+            <div class="meal-card">
+              <div class="meal-card-header"><span class="meal-badge"><i class="fa-solid fa-moon"></i> Dinner</span><span class="meal-time">8:00 - 10:00 PM</span></div>
+              <ul class="meal-items-list">
+                <li><i class="fa-solid fa-check"></i> Homestyle Chicken Curry (for Non-Veg residents)</li>
+                <li><i class="fa-solid fa-check"></i> Shahi Paneer (Special Veg alternative)</li>
+                <li><i class="fa-solid fa-check"></i> Dal Fry, Phulkas &amp; Peas Rice</li>
+                <li><i class="fa-solid fa-check"></i> Fresh Cut Fruits / Custard</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- THURSDAY -->
+        <div class="day-menu-panel" id="menu-thursday">
+          <div class="menu-day-banner">
+            <h3><i class="fa-solid fa-calendar-day"></i> Thursday Dining Schedule</h3>
+            <span class="diet-tag"><i class="fa-solid fa-leaf text-emerald"></i> Traditional South &amp; North Fusion</span>
+          </div>
+          <div class="meals-grid">
+            <div class="meal-card">
+              <div class="meal-card-header"><span class="meal-badge"><i class="fa-solid fa-sun"></i> Breakfast</span><span class="meal-time">7:30 - 9:30 AM</span></div>
+              <ul class="meal-items-list">
+                <li><i class="fa-solid fa-check"></i> Medu Vada &amp; Rava Upma</li>
+                <li><i class="fa-solid fa-check"></i> Piping Hot Sambar &amp; 2 Chutneys</li>
+                <li><i class="fa-solid fa-check"></i> Boiled Eggs / Fresh Seasonal Fruit</li>
+                <li><i class="fa-solid fa-check"></i> Tea / Coffee / Milk</li>
+              </ul>
+            </div>
+            <div class="meal-card">
+              <div class="meal-card-header"><span class="meal-badge"><i class="fa-solid fa-sun-plant-wilt"></i> Lunch</span><span class="meal-time">12:30 - 2:30 PM</span></div>
+              <ul class="meal-items-list">
+                <li><i class="fa-solid fa-check"></i> Gujarati Sev Tameta Nu Shaak / Lauki Kofta</li>
+                <li><i class="fa-solid fa-check"></i> Tuver Dal with Tadka</li>
+                <li><i class="fa-solid fa-check"></i> Soft Rotis &amp; Steamed Rice</li>
+                <li><i class="fa-solid fa-check"></i> Cucumber Raita &amp; Roasted Papad</li>
+              </ul>
+            </div>
+            <div class="meal-card">
+              <div class="meal-card-header"><span class="meal-badge"><i class="fa-solid fa-cloud-sun"></i> Evening Snacks</span><span class="meal-time">5:00 - 6:30 PM</span></div>
+              <ul class="meal-items-list">
+                <li><i class="fa-solid fa-check"></i> Mumbai Pav Bhaji (2 Butter Pavs)</li>
+                <li><i class="fa-solid fa-check"></i> Chopped Onions &amp; Lemon wedges</li>
+                <li><i class="fa-solid fa-check"></i> Elaichi Chai / Filter Coffee</li>
+              </ul>
+            </div>
+            <div class="meal-card">
+              <div class="meal-card-header"><span class="meal-badge"><i class="fa-solid fa-moon"></i> Dinner</span><span class="meal-time">8:00 - 10:00 PM</span></div>
+              <ul class="meal-items-list">
+                <li><i class="fa-solid fa-check"></i> Palak Paneer (Fresh Spinach &amp; Cottage Cheese)</li>
+                <li><i class="fa-solid fa-check"></i> Chana Dal Dhaba Style</li>
+                <li><i class="fa-solid fa-check"></i> Tawa Rotis &amp; Steamed Rice</li>
+                <li><i class="fa-solid fa-check"></i> Moong Dal Halwa</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- FRIDAY -->
+        <div class="day-menu-panel" id="menu-friday">
+          <div class="menu-day-banner">
+            <h3><i class="fa-solid fa-calendar-day"></i> Friday Dining Schedule</h3>
+            <span class="diet-tag"><i class="fa-solid fa-sparkles text-emerald"></i> Weekend Warmup Delights</span>
+          </div>
+          <div class="meals-grid">
+            <div class="meal-card">
+              <div class="meal-card-header"><span class="meal-badge"><i class="fa-solid fa-sun"></i> Breakfast</span><span class="meal-time">7:30 - 9:30 AM</span></div>
+              <ul class="meal-items-list">
+                <li><i class="fa-solid fa-check"></i> Methi Thepla with Chunda &amp; Dahi</li>
+                <li><i class="fa-solid fa-check"></i> Bread Omelette / Butter Toast</li>
+                <li><i class="fa-solid fa-check"></i> Hot Milk with Bournvita / Horlicks</li>
+                <li><i class="fa-solid fa-check"></i> Fresh Kadak Chai / Coffee</li>
+              </ul>
+            </div>
+            <div class="meal-card">
+              <div class="meal-card-header"><span class="meal-badge"><i class="fa-solid fa-sun-plant-wilt"></i> Lunch</span><span class="meal-time">12:30 - 2:30 PM</span></div>
+              <ul class="meal-items-list">
+                <li><i class="fa-solid fa-check"></i> Veg Manchurian Gravy with Fried Rice</li>
+                <li><i class="fa-solid fa-check"></i> Hakka Noodles (Indo-Chinese)</li>
+                <li><i class="fa-solid fa-check"></i> Hot &amp; Sour Vegetable Soup</li>
+                <li><i class="fa-solid fa-check"></i> Crisp Spring Roll bites &amp; Kimchi</li>
+              </ul>
+            </div>
+            <div class="meal-card">
+              <div class="meal-card-header"><span class="meal-badge"><i class="fa-solid fa-cloud-sun"></i> Evening Snacks</span><span class="meal-time">5:00 - 6:30 PM</span></div>
+              <ul class="meal-items-list">
+                <li><i class="fa-solid fa-check"></i> Punjabi Samosa with Saunth Chutney</li>
+                <li><i class="fa-solid fa-check"></i> Sweet &amp; Salted Cookies</li>
+                <li><i class="fa-solid fa-check"></i> Special Masala Chai</li>
+              </ul>
+            </div>
+            <div class="meal-card">
+              <div class="meal-card-header"><span class="meal-badge"><i class="fa-solid fa-moon"></i> Dinner</span><span class="meal-time">8:00 - 10:00 PM</span></div>
+              <ul class="meal-items-list">
+                <li><i class="fa-solid fa-check"></i> Malai Kofta in Rich Cashew Gravy</li>
+                <li><i class="fa-solid fa-check"></i> Panchratna Dal (5 Dal Blend)</li>
+                <li><i class="fa-solid fa-check"></i> Butter Naan &amp; Jeera Rice</li>
+                <li><i class="fa-solid fa-check"></i> Ice Cream Cups (Vanilla / Chocolate)</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- SATURDAY -->
+        <div class="day-menu-panel" id="menu-saturday">
+          <div class="menu-day-banner">
+            <h3><i class="fa-solid fa-calendar-day"></i> Saturday Dining Schedule</h3>
+            <span class="diet-tag"><i class="fa-solid fa-gamepad text-emerald"></i> Relaxed Weekend Dining</span>
+          </div>
+          <div class="meals-grid">
+            <div class="meal-card">
+              <div class="meal-card-header"><span class="meal-badge"><i class="fa-solid fa-sun"></i> Breakfast</span><span class="meal-time">8:00 - 10:00 AM</span></div>
+              <ul class="meal-items-list">
+                <li><i class="fa-solid fa-check"></i> Puri &amp; Halwai Style Bedmi Aloo Sabzi</li>
+                <li><i class="fa-solid fa-check"></i> Sooji Halwa (Sweet Semolina)</li>
+                <li><i class="fa-solid fa-check"></i> Boiled Eggs / Cut Papaya</li>
+                <li><i class="fa-solid fa-check"></i> Morning Tea &amp; Espresso Coffee</li>
+              </ul>
+            </div>
+            <div class="meal-card">
+              <div class="meal-card-header"><span class="meal-badge"><i class="fa-solid fa-sun-plant-wilt"></i> Lunch</span><span class="meal-time">12:30 - 2:30 PM</span></div>
+              <ul class="meal-items-list">
+                <li><i class="fa-solid fa-check"></i> Punjabi Kadhi Pakora</li>
+                <li><i class="fa-solid fa-check"></i> Aloo Shimla Mirch (Capsicum Dry)</li>
+                <li><i class="fa-solid fa-check"></i> Steamed Basmati Rice &amp; Phulkas</li>
+                <li><i class="fa-solid fa-check"></i> Masala Papad, Achaar &amp; Onion Rings</li>
+              </ul>
+            </div>
+            <div class="meal-card">
+              <div class="meal-card-header"><span class="meal-badge"><i class="fa-solid fa-cloud-sun"></i> Evening Snacks</span><span class="meal-time">5:00 - 6:30 PM</span></div>
+              <ul class="meal-items-list">
+                <li><i class="fa-solid fa-check"></i> Corn &amp; Cheese Maggi / Macaroni</li>
+                <li><i class="fa-solid fa-check"></i> Bakery Biscuits</li>
+                <li><i class="fa-solid fa-check"></i> Hot Coffee / Masala Chai</li>
+              </ul>
+            </div>
+            <div class="meal-card">
+              <div class="meal-card-header"><span class="meal-badge"><i class="fa-solid fa-moon"></i> Dinner</span><span class="meal-time">8:00 - 10:00 PM</span></div>
+              <ul class="meal-items-list">
+                <li><i class="fa-solid fa-check"></i> Egg Curry (Non-Veg) / Paneer Do Pyaza (Veg)</li>
+                <li><i class="fa-solid fa-check"></i> Dal Tadka, Ghee Rotis</li>
+                <li><i class="fa-solid fa-check"></i> Veg Pulao &amp; Onion Raita</li>
+                <li><i class="fa-solid fa-check"></i> Rasgulla (2 pcs)</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- SUNDAY -->
+        <div class="day-menu-panel" id="menu-sunday">
+          <div class="menu-day-banner banner-sunday">
+            <h3><i class="fa-solid fa-crown text-amber"></i> Sunday Grand Feast</h3>
+            <span class="diet-tag"><i class="fa-solid fa-star text-amber"></i> Chef's Special Weekend Feast (Dum Biryani Special)</span>
+          </div>
+          <div class="meals-grid">
+            <div class="meal-card">
+              <div class="meal-card-header"><span class="meal-badge"><i class="fa-solid fa-sun"></i> Extended Brunch</span><span class="meal-time">8:30 - 10:30 AM</span></div>
+              <ul class="meal-items-list">
+                <li><i class="fa-solid fa-check"></i> Gobhi &amp; Paneer Stuffed Parathas</li>
+                <li><i class="fa-solid fa-check"></i> French Toast / Cheese Omelettes</li>
+                <li><i class="fa-solid fa-check"></i> Fresh Sweet Lassi / Cold Coffee</li>
+                <li><i class="fa-solid fa-check"></i> Assorted Fresh Seasonal Fruits</li>
+              </ul>
+            </div>
+            <div class="meal-card highlight-meal">
+              <div class="meal-card-header"><span class="meal-badge"><i class="fa-solid fa-crown text-amber"></i> Grand Feast Lunch</span><span class="meal-time">12:30 - 3:00 PM</span></div>
+              <ul class="meal-items-list">
+                <li><i class="fa-solid fa-check"></i> Hyderabadi Dum Chicken Biryani (Non-Veg)</li>
+                <li><i class="fa-solid fa-check"></i> Royal Lucknowi Dum Paneer Biryani (Veg)</li>
+                <li><i class="fa-solid fa-check"></i> Mirchi Ka Salan &amp; Creamy Burani Raita</li>
+                <li><i class="fa-solid fa-check"></i> Rumali Roti &amp; Dal Maharani</li>
+                <li><i class="fa-solid fa-check"></i> Shahi Tukda with Rabri (Special Dessert)</li>
+              </ul>
+            </div>
+            <div class="meal-card">
+              <div class="meal-card-header"><span class="meal-badge"><i class="fa-solid fa-cloud-sun"></i> Evening Snacks</span><span class="meal-time">5:00 - 6:30 PM</span></div>
+              <ul class="meal-items-list">
+                <li><i class="fa-solid fa-check"></i> Bhel Puri &amp; Sev Puri (Chaat Special)</li>
+                <li><i class="fa-solid fa-check"></i> Salted Cashews &amp; Cookies</li>
+                <li><i class="fa-solid fa-check"></i> Special Ginger Cardamom Tea</li>
+              </ul>
+            </div>
+            <div class="meal-card">
+              <div class="meal-card-header"><span class="meal-badge"><i class="fa-solid fa-moon"></i> Light Sunday Dinner</span><span class="meal-time">8:00 - 10:00 PM</span></div>
+              <ul class="meal-items-list">
+                <li><i class="fa-solid fa-check"></i> Light Comforting Khichdi / Curd Rice</li>
+                <li><i class="fa-solid fa-check"></i> Methi Aloo &amp; Yellow Moong Dal</li>
+                <li><i class="fa-solid fa-check"></i> Warm Phulkas with Ghee</li>
+                <li><i class="fa-solid fa-check"></i> Warm Turmeric Almond Milk</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Food Quality Highlights Strip -->
+      <div class="food-quality-features">
+        <div class="fq-item">
+          <i class="fa-solid fa-certificate"></i>
+          <span>FSSAI Certified Commercial Kitchen</span>
+        </div>
+        <div class="fq-item">
+          <i class="fa-solid fa-droplet"></i>
+          <span>Cooked in 100% RO Purified Water</span>
+        </div>
+        <div class="fq-item">
+          <i class="fa-solid fa-seedling"></i>
+          <span>Daily Fresh Produce, Zero Frozen Ingredients</span>
+        </div>
+        <div class="fq-item">
+          <i class="fa-solid fa-clipboard-check"></i>
+          <span>Weekly Resident Food Committee Feedback</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==============================================
+       7. HOSTEL RULES & POLICIES
+       ============================================== -->
+  <section class="section rules-section" id="rules">
+    <div class="container">
+      <div class="section-header text-center">
+        <span class="section-tag"><i class="fa-solid fa-scale-balanced"></i> CAMPUS CODE OF CONDUCT</span>
+        <h2 class="section-title">Hostel Rules &amp; Living Policies</h2>
+        <div class="title-divider"></div>
+        <p class="section-subtitle">
+          To ensure safety, academic focus, and mutual respect among all residents, all STAYNEST members adhere to our transparent living guidelines.
+        </p>
+      </div>
+
+      <div class="rules-container">
+        <!-- Rule Category 1: Entry & Exit Timings -->
+        <div class="rule-accordion-card active">
+          <div class="rule-header" role="button" tabindex="0">
+            <div class="rule-title-group">
+              <span class="rule-number">01</span>
+              <div class="rule-icon-box"><i class="fa-solid fa-door-open"></i></div>
+              <h3>Entry, Exit &amp; Curfew Timings</h3>
+            </div>
+            <i class="fa-solid fa-chevron-down accordion-arrow"></i>
+          </div>
+          <div class="rule-body">
+            <ul>
+              <li><strong>Standard Curfew:</strong> The main residence biometric turnstiles lock at <strong>10:00 PM</strong> on weekdays and <strong>10:30 PM</strong> on Saturdays/Sundays.</li>
+              <li><strong>Late Pass Approval:</strong> Students with legitimate college lab projects, library hours, or coaching must submit an online e-gate pass via the warden portal prior to 7:00 PM.</li>
+              <li><strong>Biometric Attendance:</strong> Mandatory nightly thumbprint check-in between 9:30 PM and 10:00 PM ensures every student is accounted for and safe.</li>
+              <li><strong>Night-Out Passes:</strong> Overnight stays outside the hostel require written parental confirmation via verified SMS or email to the warden desk.</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Rule Category 2: Cleanliness & Hygiene -->
+        <div class="rule-accordion-card">
+          <div class="rule-header" role="button" tabindex="0">
+            <div class="rule-title-group">
+              <span class="rule-number">02</span>
+              <div class="rule-icon-box"><i class="fa-solid fa-broom"></i></div>
+              <h3>Room Cleanliness &amp; Waste Disposal</h3>
+            </div>
+            <i class="fa-solid fa-chevron-down accordion-arrow"></i>
+          </div>
+          <div class="rule-body">
+            <ul>
+              <li><strong>Daily Housekeeping Access:</strong> Residents must grant access to our verified housekeeping staff between 10:00 AM and 2:00 PM for daily vacuuming and bathroom scrubbing.</li>
+              <li><strong>Waste Segregation:</strong> Wet organic waste and dry plastic/paper waste must be placed in their respective segregated corridor bins.</li>
+              <li><strong>Personal Room Cooking:</strong> Cooking using electric stoves, hotplates, or LPG cylinders inside residential bedrooms is strictly prohibited to prevent fire hazards.</li>
+              <li><strong>Sanitary Hygiene:</strong> Please utilize dedicated sanitary disposal bins in attached washrooms; flushing foreign objects is penalized.</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Rule Category 3: Visitor Policies -->
+        <div class="rule-accordion-card">
+          <div class="rule-header" role="button" tabindex="0">
+            <div class="rule-title-group">
+              <span class="rule-number">03</span>
+              <div class="rule-icon-box"><i class="fa-solid fa-user-shield"></i></div>
+              <h3>Visitor &amp; Parent Policies</h3>
+            </div>
+            <i class="fa-solid fa-chevron-down accordion-arrow"></i>
+          </div>
+          <div class="rule-body">
+            <ul>
+              <li><strong>Parent Visiting Lounge:</strong> Parents, legal guardians, and siblings are warmly welcome in our ground floor Visitor Café &amp; Lounge between 10:00 AM and 7:00 PM.</li>
+              <li><strong>Dormitory Privacy:</strong> Male visitors (including fathers) are not permitted into Girls Wings, and female visitors are not permitted into Boys residential corridors beyond the main lobby.</li>
+              <li><strong>Overnight Guests:</strong> Non-resident friends and outside guests are not allowed overnight stays in student rooms. Subsidized guest rooms can be reserved in advance for visiting parents.</li>
+              <li><strong>Visitor ID Registration:</strong> All guests must provide valid government photo identification (Aadhaar / Voter ID) at the security reception desk.</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Rule Category 4: Quiet Hours & Study Zones -->
+        <div class="rule-accordion-card">
+          <div class="rule-header" role="button" tabindex="0">
+            <div class="rule-title-group">
+              <span class="rule-number">04</span>
+              <div class="rule-icon-box"><i class="fa-solid fa-volume-xmark"></i></div>
+              <h3>Noise Restrictions &amp; Quiet Hours</h3>
+            </div>
+            <i class="fa-solid fa-chevron-down accordion-arrow"></i>
+          </div>
+          <div class="rule-body">
+            <ul>
+              <li><strong>Mandatory Quiet Hours:</strong> Strict silence is enforced in all residential corridors, bedrooms, and reading zones from <strong>10:30 PM to 06:30 AM</strong> every day.</li>
+              <li><strong>Headphones Policy:</strong> Watching videos, listening to music, or attending online video calls inside shared rooms must be conducted with earphones/headphones.</li>
+              <li><strong>24/7 Study Hall:</strong> Students wishing to participate in collaborative group discussions or late-night exam prep are encouraged to utilize our sound-isolated Discussion Rooms.</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Rule Category 5: Property Safety & Electrical Guidelines -->
+        <div class="rule-accordion-card">
+          <div class="rule-header" role="button" tabindex="0">
+            <div class="rule-title-group">
+              <span class="rule-number">05</span>
+              <div class="rule-icon-box"><i class="fa-solid fa-plug-circle-bolt"></i></div>
+              <h3>Property Safety &amp; Electrical Usage</h3>
+            </div>
+            <i class="fa-solid fa-chevron-down accordion-arrow"></i>
+          </div>
+          <div class="rule-body">
+            <ul>
+              <li><strong>Approved Appliances:</strong> Laptops, mobile chargers, study lamps, tablets, and low-power trimmers are permitted. High-draw appliances (immersion water coils, electric room heaters) are prohibited without prior approval.</li>
+              <li><strong>Switch-Off Discipline:</strong> Lights, fans, and air conditioners must be switched off when exiting bedrooms. Conserving energy is our shared community responsibility.</li>
+              <li><strong>Property Damage:</strong> Any deliberate defacement of walls, furniture, or smart electronics will be billed to the resident's security deposit at actual replacement cost.</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Rule Category 6: Discipline & Zero Tolerance -->
+        <div class="rule-accordion-card">
+          <div class="rule-header" role="button" tabindex="0">
+            <div class="rule-title-group">
+              <span class="rule-number">06</span>
+              <div class="rule-icon-box"><i class="fa-solid fa-ban"></i></div>
+              <h3>Zero-Tolerance Substance &amp; Anti-Ragging Policy</h3>
+            </div>
+            <i class="fa-solid fa-chevron-down accordion-arrow"></i>
+          </div>
+          <div class="rule-body">
+            <ul>
+              <li><strong>100% Smoke, Alcohol &amp; Drug-Free:</strong> STAYNEST maintains a zero-tolerance stance against tobacco, vape/e-cigarettes, alcoholic beverages, and illicit substances on campus.</li>
+              <li><strong>Strict Anti-Ragging Mandate:</strong> In compliance with Supreme Court and UGC directives, any intimidation, ragging, or harassment leads to immediate police referral and immediate hostel expulsion.</li>
+              <li><strong>Inclusive Atmosphere:</strong> Mutual respect across religion, state, caste, and gender identity is mandatory. Harassment of any employee or fellow resident is treated with strict disciplinary action.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==============================================
+       8. PHOTO GALLERY
+       ============================================== -->
+  <section class="section gallery-section" id="gallery">
+    <div class="container">
+      <div class="section-header text-center">
+        <span class="section-tag"><i class="fa-solid fa-camera-retro"></i> LIFE AT STAYNEST</span>
+        <h2 class="section-title">Explore Our Vibrant Campus &amp; Spaces</h2>
+        <div class="title-divider"></div>
+        <p class="section-subtitle">
+          Take a visual tour through our tastefully furnished bedrooms, high-tech study suites, hygienic dining halls, and sunny campus exteriors.
+        </p>
+      </div>
+
+      <!-- Gallery Filter Tabs -->
+      <div class="gallery-filters-bar" role="tablist" aria-label="Gallery category filters">
+        <button class="gallery-filter-btn active" data-category="all">All Photos</button>
+        <button class="gallery-filter-btn" data-category="bedrooms">Bedrooms</button>
+        <button class="gallery-filter-btn" data-category="study">Study Suites</button>
+        <button class="gallery-filter-btn" data-category="dining">Dining &amp; Kitchen</button>
+        <button class="gallery-filter-btn" data-category="common">Common Lounges</button>
+        <button class="gallery-filter-btn" data-category="exterior">Campus &amp; Exterior</button>
+      </div>
+
+      <!-- Gallery Grid -->
+      <div class="gallery-grid" id="galleryGrid">
+        <!-- 1: Bedroom -->
+        <div class="gallery-item" data-category="bedrooms">
+          <div class="gallery-card">
+            <img src="https://images.unsplash.com/photo-1595526114035-0d45ed16cfbf?auto=format&fit=crop&w=800&q=80" alt="Modern double sharing bedroom with orthopaedic twin beds" loading="lazy">
+            <div class="gallery-overlay">
+              <span class="gallery-tag">Bedrooms</span>
+              <h4>Double Sharing Deluxe Studio</h4>
+              <p>Natural sunlight, storage bed, and personal workspace</p>
+              <button class="btn-gallery-zoom" aria-label="Open image in fullscreen modal"><i class="fa-solid fa-expand"></i></button>
+            </div>
+          </div>
+        </div>
+
+        <!-- 2: Study -->
+        <div class="gallery-item" data-category="study">
+          <div class="gallery-card">
+            <img src="https://images.unsplash.com/photo-1497633762265-9d179a990aa6?auto=format&fit=crop&w=800&q=80" alt="Quiet student library and ergonomic study stations" loading="lazy">
+            <div class="gallery-overlay">
+              <span class="gallery-tag">Study Suites</span>
+              <h4>24/7 Silent Study Hall</h4>
+              <p>High-speed Wi-Fi, reference books, and charging docks</p>
+              <button class="btn-gallery-zoom" aria-label="Open image in fullscreen modal"><i class="fa-solid fa-expand"></i></button>
+            </div>
+          </div>
+        </div>
+
+        <!-- 3: Dining -->
+        <div class="gallery-item" data-category="dining">
+          <div class="gallery-card">
+            <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=800&q=80" alt="Hygienic and spacious hostel dining hall" loading="lazy">
+            <div class="gallery-overlay">
+              <span class="gallery-tag">Dining &amp; Kitchen</span>
+              <h4>Central Dining Mess</h4>
+              <p>Buffet counters, sanitized cutlery, and spacious seating</p>
+              <button class="btn-gallery-zoom" aria-label="Open image in fullscreen modal"><i class="fa-solid fa-expand"></i></button>
+            </div>
+          </div>
+        </div>
+
+        <!-- 4: Common -->
+        <div class="gallery-item" data-category="common">
+          <div class="gallery-card">
+            <img src="https://images.unsplash.com/photo-1527529482837-4698179dc6ce?auto=format&fit=crop&w=800&q=80" alt="Recreation zone with beanbags and gaming setup" loading="lazy">
+            <div class="gallery-overlay">
+              <span class="gallery-tag">Common Lounges</span>
+              <h4>Student Community Lounge</h4>
+              <p>PS5 gaming console, board games, and relaxing couches</p>
+              <button class="btn-gallery-zoom" aria-label="Open image in fullscreen modal"><i class="fa-solid fa-expand"></i></button>
+            </div>
+          </div>
+        </div>
+
+        <!-- 5: Exterior -->
+        <div class="gallery-item" data-category="exterior">
+          <div class="gallery-card">
+            <img src="https://images.unsplash.com/photo-1541123437800-1bb1317badc2?auto=format&fit=crop&w=800&q=80" alt="Modern multi-story building exterior with landscaped lawn" loading="lazy">
+            <div class="gallery-overlay">
+              <span class="gallery-tag">Campus &amp; Exterior</span>
+              <h4>STAYNEST Main Campus</h4>
+              <p>Green landscaped courtyard and secure perimeter security</p>
+              <button class="btn-gallery-zoom" aria-label="Open image in fullscreen modal"><i class="fa-solid fa-expand"></i></button>
+            </div>
+          </div>
+        </div>
+
+        <!-- 6: Bedroom Solo -->
+        <div class="gallery-item" data-category="bedrooms">
+          <div class="gallery-card">
+            <img src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=800&q=80" alt="Private single bedroom with sleek wooden flooring" loading="lazy">
+            <div class="gallery-overlay">
+              <span class="gallery-tag">Bedrooms</span>
+              <h4>Single Executive Bedroom</h4>
+              <p>Complete privacy with attached luxury washroom</p>
+              <button class="btn-gallery-zoom" aria-label="Open image in fullscreen modal"><i class="fa-solid fa-expand"></i></button>
+            </div>
+          </div>
+        </div>
+
+        <!-- 7: Common/Fitness -->
+        <div class="gallery-item" data-category="common">
+          <div class="gallery-card">
+            <img src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&w=800&q=80" alt="Hostel fitness and workout area for residents" loading="lazy">
+            <div class="gallery-overlay">
+              <span class="gallery-tag">Common Lounges</span>
+              <h4>Fitness &amp; Wellness Studio</h4>
+              <p>Treadmills, dumbbells, yoga mats, and cross-trainers</p>
+              <button class="btn-gallery-zoom" aria-label="Open image in fullscreen modal"><i class="fa-solid fa-expand"></i></button>
+            </div>
+          </div>
+        </div>
+
+        <!-- 8: Study Group -->
+        <div class="gallery-item" data-category="study">
+          <div class="gallery-card">
+            <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=800&q=80" alt="Collaborative project room with students discussing" loading="lazy">
+            <div class="gallery-overlay">
+              <span class="gallery-tag">Study Suites</span>
+              <h4>Collaborative Project Room</h4>
+              <p>Whiteboards, projector screen, and group conference table</p>
+              <button class="btn-gallery-zoom" aria-label="Open image in fullscreen modal"><i class="fa-solid fa-expand"></i></button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==============================================
+       9. ENQUIRY / BOOKING REQUEST
+       ============================================== -->
+  <section class="section enquiry-section" id="enquiry">
+    <div class="container">
+      <div class="enquiry-card-wrapper">
+        <div class="enquiry-grid">
+          <!-- Left Info Column -->
+          <div class="enquiry-info-col">
+            <span class="badge-pill-light"><i class="fa-regular fa-calendar-check"></i> ADMISSIONS 2026</span>
+            <h2 class="enquiry-title">Ready to Experience STAYNEST?</h2>
+            <p class="enquiry-desc">
+              Submit your room preference and schedule a free in-person or 3D virtual tour of our residence. Our warden admission coordinator will reach out within 2 hours.
+            </p>
+
+            <div class="enquiry-features-list">
+              <div class="enq-feat">
+                <i class="fa-solid fa-circle-check"></i>
+                <div>
+                  <strong>Zero Obligation &amp; No Brokerage</strong>
+                  <span>Direct accommodation booking with clear refund policies.</span>
+                </div>
+              </div>
+              <div class="enq-feat">
+                <i class="fa-solid fa-circle-check"></i>
+                <div>
+                  <strong>Parent Accompanied Visits Welcome</strong>
+                  <span>Inspect our clean kitchen, security desk, and dorms freely.</span>
+                </div>
+              </div>
+              <div class="enq-feat">
+                <i class="fa-solid fa-circle-check"></i>
+                <div>
+                  <strong>Trial Stay Option Available</strong>
+                  <span>Opt for a 2-day trial stay to test food and comfort firsthand.</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Academic project banner notice -->
+            <div class="academic-note-box">
+              <i class="fa-solid fa-shield-halved"></i>
+              <div>
+                <strong>Demonstration Form Notice:</strong>
+                <p>This is a simulated enquiry system for academic evaluation. Submitted data generates a demonstration booking receipt and does not trigger financial transactions.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right Form Column -->
+          <div class="enquiry-form-col">
+            <div class="form-header">
+              <h3><i class="fa-solid fa-pen-to-square text-emerald"></i> Reserve / Enquire for a Bed</h3>
+              <p>Fill out the details below. All fields marked with * are required.</p>
+            </div>
+
+            <form id="enquiryForm" class="enquiry-form" novalidate>
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="enqFullName">Full Name <span class="required">*</span></label>
+                  <div class="input-with-icon">
+                    <i class="fa-regular fa-user"></i>
+                    <input type="text" id="enqFullName" class="form-control" placeholder="e.g. Rahul Sharma" required>
+                  </div>
+                  <span class="error-msg" id="errFullName">Please enter your full name (at least 3 characters).</span>
+                </div>
+
+                <div class="form-group">
+                  <label for="enqEmail">Email Address <span class="required">*</span></label>
+                  <div class="input-with-icon">
+                    <i class="fa-regular fa-envelope"></i>
+                    <input type="email" id="enqEmail" class="form-control" placeholder="e.g. rahul@example.com" required>
+                  </div>
+                  <span class="error-msg" id="errEmail">Please enter a valid email address.</span>
+                </div>
+              </div>
+
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="enqPhone">Phone Number <span class="required">*</span></label>
+                  <div class="input-with-icon">
+                    <i class="fa-solid fa-phone"></i>
+                    <input type="tel" id="enqPhone" class="form-control" placeholder="10-digit mobile number" maxlength="10" required>
+                  </div>
+                  <span class="error-msg" id="errPhone">Please enter a valid 10-digit Indian phone number.</span>
+                </div>
+
+                <div class="form-group">
+                  <label for="enqRoomType">Preferred Room Type <span class="required">*</span></label>
+                  <div class="input-with-icon">
+                    <i class="fa-solid fa-bed"></i>
+                    <select id="enqRoomType" class="form-control" required>
+                      <option value="">-- Select Room Type --</option>
+                      <option value="Single Sharing Deluxe Suite (₹16,500/mo)">Single Sharing Deluxe Suite (₹16,500/mo)</option>
+                      <option value="Double Sharing Studio (₹10,800/mo)">Double Sharing Studio (₹10,800/mo)</option>
+                      <option value="Triple Sharing Classic (₹8,200/mo)">Triple Sharing Classic (₹8,200/mo)</option>
+                      <option value="Four Sharing Quad (₹6,200/mo)">Four Sharing Quad (₹6,200/mo)</option>
+                      <option value="Single Executive Penthouse (₹18,500/mo)">Single Executive Penthouse (Waitlist)</option>
+                      <option value="Double Sharing Premium AC (₹12,500/mo)">Double Sharing Premium AC (₹12,500/mo)</option>
+                    </select>
+                  </div>
+                  <span class="error-msg" id="errRoomType">Please choose your preferred room configuration.</span>
+                </div>
+              </div>
+
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="enqJoiningDate">Expected Joining Date <span class="required">*</span></label>
+                  <div class="input-with-icon">
+                    <i class="fa-regular fa-calendar-days"></i>
+                    <input type="date" id="enqJoiningDate" class="form-control" required>
+                  </div>
+                  <span class="error-msg" id="errJoiningDate">Please select a valid upcoming joining date.</span>
+                </div>
+
+                <div class="form-group">
+                  <label for="enqCollege">College / University / Company</label>
+                  <div class="input-with-icon">
+                    <i class="fa-solid fa-building-columns"></i>
+                    <input type="text" id="enqCollege" class="form-control" placeholder="e.g. Amity / Bennett / Galgotias / Tech Org">
+                  </div>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="enqMessage">Additional Requirements / Dietary Preferences</label>
+                <textarea id="enqMessage" class="form-control" rows="3" placeholder="Tell us if you need pure Jain meals, a top floor room, late study preferences, etc."></textarea>
+              </div>
+
+              <button type="submit" class="btn btn-emerald btn-block btn-lg" id="submitEnquiryBtn">
+                <i class="fa-solid fa-paper-plane"></i> Submit Demonstration Enquiry
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==============================================
+       10. COMPLAINT AND SUPPORT SECTION
+       ============================================== -->
+  <section class="section complaints-section" id="complaints">
+    <div class="container">
+      <div class="section-header text-center">
+        <span class="section-tag"><i class="fa-solid fa-headset"></i> STUDENT CARE &amp; HELPDESK</span>
+        <h2 class="section-title">Hostel Grievance &amp; Maintenance Portal</h2>
+        <div class="title-divider"></div>
+        <p class="section-subtitle">
+          At STAYNEST, every issue is handled with measurable turnaround times. Residents can submit grievances, generate reference tokens, and track real-time resolution stages.
+        </p>
+        <div class="demo-data-badge">
+          <i class="fa-solid fa-database"></i>
+          <span>Interactive Student Portal Engine: Powered by browser localStorage for academic testing.</span>
+        </div>
+      </div>
+
+      <div class="complaints-container-grid">
+        <!-- Left: Complaint Submission Form -->
+        <div class="complaint-card-box">
+          <div class="card-top-header">
+            <div class="icon-circle"><i class="fa-solid fa-file-circle-plus"></i></div>
+            <div>
+              <h3>Log a New Maintenance Ticket</h3>
+              <p>Our average resolution time is 3 hours 45 minutes.</p>
+            </div>
+          </div>
+
+          <form id="complaintForm" class="complaint-form" novalidate>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="compStudentName">Student Full Name <span class="required">*</span></label>
+                <div class="input-with-icon">
+                  <i class="fa-regular fa-user"></i>
+                  <input type="text" id="compStudentName" class="form-control" placeholder="e.g. Ananya Roy" required>
+                </div>
+                <span class="error-msg" id="errCompName">Please enter student name.</span>
+              </div>
+
+              <div class="form-group">
+                <label for="compRoomNo">Room Number <span class="required">*</span></label>
+                <div class="input-with-icon">
+                  <i class="fa-solid fa-door-open"></i>
+                  <input type="text" id="compRoomNo" class="form-control" placeholder="e.g. A-204, B-102" required>
+                </div>
+                <span class="error-msg" id="errCompRoom">Please specify your room number.</span>
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="compCategory">Complaint Category <span class="required">*</span></label>
+                <div class="input-with-icon">
+                  <i class="fa-solid fa-list-check"></i>
+                  <select id="compCategory" class="form-control" required>
+                    <option value="">-- Choose Issue Category --</option>
+                    <option value="Wi-Fi & Internet">Wi-Fi &amp; Internet Connectivity</option>
+                    <option value="Food & Mess">Food &amp; Mess Quality</option>
+                    <option value="Room Maintenance">Room Maintenance &amp; Carpentry</option>
+                    <option value="Cleanliness & Housekeeping">Cleanliness &amp; Housekeeping</option>
+                    <option value="Electricity & AC">Electricity &amp; Air Conditioner</option>
+                    <option value="Water Supply & Plumbing">Water Supply &amp; Plumbing / Geyser</option>
+                    <option value="Other">Other Grievance</option>
+                  </select>
+                </div>
+                <span class="error-msg" id="errCompCat">Please select a valid complaint category.</span>
+              </div>
+
+              <div class="form-group">
+                <label for="compPriority">Urgency Level <span class="required">*</span></label>
+                <div class="input-with-icon">
+                  <i class="fa-solid fa-triangle-exclamation"></i>
+                  <select id="compPriority" class="form-control">
+                    <option value="Normal">Normal (Within 24 Hours)</option>
+                    <option value="High">High (Within 6 Hours)</option>
+                    <option value="Urgent">Urgent / Emergency (Immediate)</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="compDescription">Issue Description <span class="required">*</span></label>
+              <textarea id="compDescription" class="form-control" rows="4" placeholder="Describe the issue in detail (e.g., The Wi-Fi signal in Room 302 keeps dropping since morning or the bathroom tap is leaking)." required></textarea>
+              <span class="error-msg" id="errCompDesc">Please provide details regarding the complaint (at least 10 characters).</span>
+            </div>
+
+            <button type="submit" class="btn btn-emerald btn-block" id="submitComplaintBtn">
+              <i class="fa-solid fa-circle-check"></i> Generate Ticket &amp; Submit
+            </button>
+          </form>
+        </div>
+
+        <!-- Right: Ticket Status Tracker & Recent Tickets -->
+        <div class="complaint-status-box">
+          <div class="card-top-header">
+            <div class="icon-circle icon-track"><i class="fa-solid fa-magnifying-glass-chart"></i></div>
+            <div>
+              <h3>Track Complaint Status</h3>
+              <p>Enter your unique Reference Ticket ID or click sample tickets below.</p>
+            </div>
+          </div>
+
+          <!-- Ticket Search Input -->
+          <div class="track-search-bar">
+            <div class="input-with-icon flex-grow">
+              <i class="fa-solid fa-ticket"></i>
+              <input type="text" id="trackTicketInput" class="form-control" placeholder="e.g. SN-TKT-8241">
+            </div>
+            <button class="btn btn-emerald" id="trackTicketBtn">
+              <i class="fa-solid fa-magnifying-glass"></i> Track
+            </button>
+          </div>
+
+          <!-- Active Ticket Status Preview Box -->
+          <div class="ticket-status-card" id="ticketStatusCard">
+            <div class="ticket-card-header">
+              <div class="ticket-id-tag">
+                <span class="label">Ticket Ref:</span>
+                <strong id="displayTicketId">SN-TKT-1082</strong>
+              </div>
+              <span class="ticket-badge-status badge-in-progress" id="displayTicketBadge">
+                <i class="fa-solid fa-arrows-rotate fa-spin"></i> In Progress
+              </span>
+            </div>
+
+            <div class="ticket-card-body">
+              <div class="ticket-meta-grid">
+                <div>
+                  <span class="meta-label">Resident:</span>
+                  <span class="meta-val" id="displayStudent">Aditya Kumar</span>
+                </div>
+                <div>
+                  <span class="meta-label">Room No:</span>
+                  <span class="meta-val" id="displayRoom">B-304</span>
+                </div>
+                <div>
+                  <span class="meta-label">Category:</span>
+                  <span class="meta-val" id="displayCategory">Wi-Fi &amp; Internet</span>
+                </div>
+                <div>
+                  <span class="meta-label">Logged At:</span>
+                  <span class="meta-val" id="displayTime">Today, 10:15 AM</span>
+                </div>
+              </div>
+
+              <div class="ticket-description-box">
+                <span class="meta-label">Complaint Summary:</span>
+                <p id="displayDescription">Wi-Fi router in 3rd floor corridor is resetting intermittently. Laptop disconnects during online practical viva.</p>
+              </div>
+
+              <!-- Interactive Progress Stepper -->
+              <div class="stepper-wrapper">
+                <div class="step-item completed" id="step1">
+                  <div class="step-circle"><i class="fa-solid fa-check"></i></div>
+                  <span class="step-title">Submitted</span>
+                </div>
+                <div class="step-line active" id="line1"></div>
+                <div class="step-item completed" id="step2">
+                  <div class="step-circle"><i class="fa-solid fa-user-gear"></i></div>
+                  <span class="step-title">Assigned</span>
+                </div>
+                <div class="step-line active" id="line2"></div>
+                <div class="step-item in-progress" id="step3">
+                  <div class="step-circle"><i class="fa-solid fa-wrench"></i></div>
+                  <span class="step-title">In Progress</span>
+                </div>
+                <div class="step-line" id="line3"></div>
+                <div class="step-item" id="step4">
+                  <div class="step-circle"><i class="fa-solid fa-circle-check"></i></div>
+                  <span class="step-title">Resolved</span>
+                </div>
+              </div>
+
+              <div class="ticket-tech-assigned">
+                <i class="fa-solid fa-screwdriver-wrench text-emerald"></i>
+                <span>Assigned Technician: <strong>Manoj Verma (Network Operations)</strong> • Estimated Fix: Within 90 mins</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Pre-loaded Sample Tickets for Examiner Quick-Testing -->
+          <div class="sample-tickets-panel">
+            <span class="sample-panel-label"><i class="fa-solid fa-flask-vial"></i> Quick Test Sample Tickets (Click to Track):</span>
+            <div class="sample-pill-buttons">
+              <button class="sample-ticket-btn" data-tid="SN-TKT-1082">
+                <span>SN-TKT-1082</span>
+                <small class="badge-status-pill in-prog">In Progress</small>
+              </button>
+              <button class="sample-ticket-btn" data-tid="SN-TKT-0941">
+                <span>SN-TKT-0941</span>
+                <small class="badge-status-pill resolved">Resolved</small>
+              </button>
+              <button class="sample-ticket-btn" data-tid="SN-TKT-1150">
+                <span>SN-TKT-1150</span>
+                <small class="badge-status-pill pending">Under Review</small>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==============================================
+       11. CONTACT SECTION
+       ============================================== -->
+  <section class="section contact-section" id="contact">
+    <div class="container">
+      <div class="section-header text-center">
+        <span class="section-tag"><i class="fa-solid fa-location-dot"></i> CONNECT WITH STAYNEST</span>
+        <h2 class="section-title">Visit Our Campus &amp; Get in Touch</h2>
+        <div class="title-divider"></div>
+        <p class="section-subtitle">
+          Have queries regarding fee installments, room bookings, or transport connectivity? Our admission helpdesk is open 7 days a week.
+        </p>
+        <div class="demo-data-badge">
+          <i class="fa-solid fa-circle-info"></i>
+          <span>Sample Campus Location &amp; Contact Details for Academic Evaluation</span>
+        </div>
+      </div>
+
+      <div class="contact-grid">
+        <!-- Contact Info Cards -->
+        <div class="contact-info-column">
+          <!-- Card 1: Address -->
+          <div class="contact-detail-card">
+            <div class="contact-icon"><i class="fa-solid fa-map-location-dot"></i></div>
+            <div class="contact-text">
+              <h4>Residence Campus Address</h4>
+              <p>STAYNEST Luxury Student Living, Plot No. 24-B, Knowledge Boulevard, Near Metro Station Gate 3, Institutional Area, Sector 62, Greater Tech Hub, Pin: 201309</p>
+              <span class="sub-link"><i class="fa-solid fa-route"></i> 5 Mins walk from Metro Station</span>
+            </div>
+          </div>
+
+          <!-- Card 2: Phone -->
+          <div class="contact-detail-card">
+            <div class="contact-icon"><i class="fa-solid fa-phone-volume"></i></div>
+            <div class="contact-text">
+              <h4>Admissions &amp; Warden Helplines</h4>
+              <p><strong>Admissions Desk:</strong> +91 98765 43210 / +91 98765 43211</p>
+              <p><strong>24x7 Warden Emergency Desk:</strong> +91 98765 43299</p>
+              <span class="sub-link text-emerald"><i class="fa-brands fa-whatsapp"></i> WhatsApp Assistance Available</span>
+            </div>
+          </div>
+
+          <!-- Card 3: Email -->
+          <div class="contact-detail-card">
+            <div class="contact-icon"><i class="fa-solid fa-envelope-open-text"></i></div>
+            <div class="contact-text">
+              <h4>Official Email Desks</h4>
+              <p><strong>Admissions:</strong> admissions@staynest.demo</p>
+              <p><strong>Student Grievance:</strong> care@staynest.demo</p>
+              <p><strong>Chief Warden:</strong> warden@staynest.demo</p>
+            </div>
+          </div>
+
+          <!-- Card 4: Visiting Hours -->
+          <div class="contact-detail-card">
+            <div class="contact-icon"><i class="fa-solid fa-clock"></i></div>
+            <div class="contact-text">
+              <h4>Campus Visiting Hours</h4>
+              <p><strong>Monday to Saturday:</strong> 09:00 AM – 07:00 PM</p>
+              <p><strong>Sunday:</strong> 10:00 AM – 05:00 PM</p>
+              <span class="sub-link"><i class="fa-solid fa-mug-hot"></i> Refreshments served to visiting parents</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Contact Map & Quick Message Card -->
+        <div class="contact-interactive-column">
+          <!-- Interactive Mock Map Card -->
+          <div class="interactive-map-card">
+            <div class="map-header">
+              <div class="map-title">
+                <i class="fa-solid fa-compass text-emerald"></i>
+                <span>Campus Location Navigator</span>
+              </div>
+              <span class="badge-metro"><i class="fa-solid fa-train-subway"></i> Sector 62 Hub</span>
+            </div>
+            
+            <!-- Map graphic / interactive preview -->
+            <div class="map-graphic-box">
+              <div class="map-pulse-marker">
+                <div class="pulse-ring"></div>
+                <div class="marker-dot"><i class="fa-solid fa-house"></i></div>
+                <div class="marker-tooltip">
+                  <strong>STAYNEST Residence</strong>
+                  <span>Main Campus Building</span>
+                </div>
+              </div>
+              <div class="map-landmarks">
+                <div class="landmark lm-1"><i class="fa-solid fa-graduation-cap"></i> University Campus (500m)</div>
+                <div class="landmark lm-2"><i class="fa-solid fa-train-subway"></i> Metro Station (350m)</div>
+                <div class="landmark lm-3"><i class="fa-solid fa-hospital"></i> Multi-Specialty Hospital (1.2km)</div>
+                <div class="landmark lm-4"><i class="fa-solid fa-basket-shopping"></i> Supermarket &amp; Food Hub (200m)</div>
+              </div>
+            </div>
+
+            <div class="map-footer-bar">
+              <a href="https://maps.google.com" target="_blank" rel="noopener noreferrer" class="btn btn-outline-white btn-sm">
+                <i class="fa-solid fa-diamond-turn-right"></i> Open in Google Maps (Sample)
+              </a>
+              <span class="transit-time"><i class="fa-solid fa-person-walking"></i> Walk Score: 98/100</span>
+            </div>
+          </div>
+
+          <!-- Quick Visit Callback Request Card -->
+          <div class="quick-callback-card">
+            <h4><i class="fa-solid fa-calendar-day text-emerald"></i> Request an Instant Tour Callback</h4>
+            <p>Enter your phone number below and our student campus guide will call you within 15 minutes.</p>
+            <form id="callbackForm" class="callback-form-row">
+              <input type="tel" id="callbackPhone" class="form-control" placeholder="Enter 10-digit mobile no." maxlength="10" required>
+              <button type="submit" class="btn btn-emerald">
+                <i class="fa-solid fa-phone"></i> Call Me
+              </button>
+            </form>
+            <span class="callback-feedback" id="callbackFeedback"></span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==============================================
+       12. FOOTER
+       ============================================== -->
+  <footer class="site-footer">
+    <div class="footer-top-cta">
+      <div class="container cta-banner-inner">
+        <div class="cta-text">
+          <h3>Begin Your Most Productive Academic Year</h3>
+          <p>Secure your preferred room at STAYNEST today. Limited beds available for upcoming session.</p>
+        </div>
+        <div class="cta-actions">
+          <a href="#enquiry" class="btn btn-white btn-lg"><i class="fa-solid fa-bolt"></i> Book a Room Tour</a>
+          <a href="#rooms" class="btn btn-outline-white btn-lg"><i class="fa-solid fa-bed"></i> Compare Plans</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="container footer-main-content">
+      <div class="footer-grid">
+        <!-- Col 1: Brand Info -->
+        <div class="footer-col col-brand">
+          <a href="#home" class="brand-logo footer-logo">
+            <div class="logo-icon-wrap">
+              <i class="fa-solid fa-house-chimney"></i>
+            </div>
+            <span class="logo-title">STAY<span class="text-emerald">NEST</span></span>
+          </a>
+          <p class="footer-tagline">"Your Space. Your Comfort. Your Home."</p>
+          <p class="footer-about">
+            A premium student accommodation ecosystem engineered for modern college living, security, wholesome nutrition, and collaborative study culture.
+          </p>
+
+          <div class="academic-badge-footer">
+            <i class="fa-solid fa-code"></i>
+            <span>B.Tech 1st Year Web Development Academic Project</span>
+          </div>
+
+          <div class="social-icons-row">
+            <a href="#home" class="social-icon-btn" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#home" class="social-icon-btn" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+            <a href="#home" class="social-icon-btn" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+            <a href="#home" class="social-icon-btn" aria-label="Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+            <a href="#home" class="social-icon-btn" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+          </div>
+        </div>
+
+        <!-- Col 2: Quick Links -->
+        <div class="footer-col">
+          <h4 class="footer-heading">Quick Navigation</h4>
+          <ul class="footer-links">
+            <li><a href="#home"><i class="fa-solid fa-angle-right"></i> Home</a></li>
+            <li><a href="#about"><i class="fa-solid fa-angle-right"></i> About Us</a></li>
+            <li><a href="#rooms"><i class="fa-solid fa-angle-right"></i> Available Rooms</a></li>
+            <li><a href="#facilities"><i class="fa-solid fa-angle-right"></i> Room Facilities</a></li>
+            <li><a href="#menu"><i class="fa-solid fa-angle-right"></i> Weekly Food Menu</a></li>
+            <li><a href="#rules"><i class="fa-solid fa-angle-right"></i> Hostel Rules</a></li>
+            <li><a href="#gallery"><i class="fa-solid fa-angle-right"></i> Photo Gallery</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 3: Accommodation Types & Facilities -->
+        <div class="footer-col">
+          <h4 class="footer-heading">Living Options</h4>
+          <ul class="footer-links">
+            <li><a href="#rooms"><i class="fa-solid fa-bed"></i> Single Sharing Private Suite</a></li>
+            <li><a href="#rooms"><i class="fa-solid fa-user-group"></i> Double Sharing Studio</a></li>
+            <li><a href="#rooms"><i class="fa-solid fa-people-group"></i> Triple Sharing Classic</a></li>
+            <li><a href="#rooms"><i class="fa-solid fa-users"></i> Four Sharing Quad</a></li>
+            <li><a href="#facilities"><i class="fa-solid fa-wifi"></i> Gigabit Wi-Fi 6</a></li>
+            <li><a href="#facilities"><i class="fa-solid fa-shield-halved"></i> Biometric Security</a></li>
+            <li><a href="#menu"><i class="fa-solid fa-bowl-food"></i> 4 Chef Meals Daily</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 4: Grievance & Contact -->
+        <div class="footer-col">
+          <h4 class="footer-heading">Student Support &amp; Desk</h4>
+          <div class="footer-contact-items">
+            <p><i class="fa-solid fa-headset text-emerald"></i> <strong>Support Ticket Desk:</strong><br>
+              <a href="#complaints" class="text-white hover-emerald">Launch Complaint Tracker</a>
+            </p>
+            <p><i class="fa-solid fa-phone text-emerald"></i> <strong>Admissions Helpline:</strong><br>
+              +91 98765 43210 (9 AM – 7 PM)
+            </p>
+            <p><i class="fa-solid fa-triangle-exclamation text-amber"></i> <strong>24/7 Medical &amp; Warden:</strong><br>
+              +91 98765 43299
+            </p>
+            <p><i class="fa-solid fa-envelope text-emerald"></i> <strong>Email:</strong><br>
+              admissions@staynest.demo
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Footer Bottom Copyright & Academic Disclaimer -->
+      <div class="footer-bottom-bar">
+        <p class="copyright-text">
+          &copy; <span id="currentYear">2026</span> <strong>STAYNEST Accommodation Pvt. Ltd.</strong> All rights reserved. 
+          Designed &amp; Developed for First-Year B.Tech Web Development Academic Project.
+        </p>
+        <p class="academic-disclaimer">
+          <strong>Academic Demonstration Disclaimer:</strong> All hostel room plans, pricing, menus, contact numbers, and complaint tickets shown on this portal are sample demonstration data. No real financial transactions or commercial reservations are processed on this site.
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ==============================================
+       MODALS & FLOATING CONTROLS
+       ============================================== -->
+
+  <!-- Back to Top Floating Button -->
+  <button class="back-to-top-btn" id="backToTopBtn" aria-label="Back to top">
+    <i class="fa-solid fa-arrow-up"></i>
+  </button>
+
+  <!-- Quick Floating WhatsApp / Call Button -->
+  <a href="#contact" class="floating-enquire-btn" aria-label="Quick Enquire or Contact">
+    <i class="fa-solid fa-comment-dots"></i>
+    <span>Quick Help</span>
+  </a>
+
+  <!-- ROOM DETAILS MODAL -->
+  <div class="modal-overlay" id="roomDetailsModal" aria-hidden="true" role="dialog" aria-labelledby="modalRoomTitle">
+    <div class="modal-dialog modal-lg">
+      <button class="modal-close-btn" id="closeRoomModalBtn" aria-label="Close modal">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+      <div class="modal-content" id="roomModalContent">
+        <!-- Rendered dynamically via JS based on clicked room -->
+      </div>
+    </div>
+  </div>
+
+  <!-- ENQUIRY SUBMISSION SUCCESS MODAL -->
+  <div class="modal-overlay" id="enquirySuccessModal" aria-hidden="true" role="dialog" aria-labelledby="enqSuccessTitle">
+    <div class="modal-dialog modal-md">
+      <button class="modal-close-btn" id="closeEnquiryModalBtn" aria-label="Close modal">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+      <div class="modal-content text-center">
+        <div class="success-icon-wrap">
+          <i class="fa-solid fa-circle-check"></i>
+        </div>
+        <span class="badge-token" id="enqTokenBadge">TOKEN: SN-ENQ-2026-8941</span>
+        <h3 id="enqSuccessTitle">Enquiry Submitted Successfully!</h3>
+        <p class="modal-lead">Thank you, <strong id="enqConfirmedName">Student</strong>. Your demonstration room enquiry has been recorded in the local demo database.</p>
+        
+        <div class="receipt-summary-card">
+          <div class="receipt-row">
+            <span>Room Plan:</span>
+            <strong id="enqConfirmedRoom">Double Sharing Studio</strong>
+          </div>
+          <div class="receipt-row">
+            <span>Preferred Date:</span>
+            <strong id="enqConfirmedDate">15 July 2026</strong>
+          </div>
+          <div class="receipt-row">
+            <span>Contact Phone:</span>
+            <strong id="enqConfirmedPhone">+91 98765 43210</strong>
+          </div>
+          <div class="receipt-row">
+            <span>Assigned Campus Guide:</span>
+            <strong>Pooja Singhal (Admissions)</strong>
+          </div>
+        </div>
+
+        <div class="modal-demo-alert">
+          <i class="fa-solid fa-circle-info"></i>
+          <span>Academic Project Confirmation: This demonstrates client-side JavaScript validation, form handling, and reference token generation.</span>
+        </div>
+
+        <button class="btn btn-emerald btn-block" id="closeEnquiryOkBtn">
+          <i class="fa-solid fa-check"></i> Return to Website
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- COMPLAINT SUBMISSION SUCCESS MODAL -->
+  <div class="modal-overlay" id="complaintSuccessModal" aria-hidden="true" role="dialog" aria-labelledby="compSuccessTitle">
+    <div class="modal-dialog modal-md">
+      <button class="modal-close-btn" id="closeComplaintModalBtn" aria-label="Close modal">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+      <div class="modal-content text-center">
+        <div class="success-icon-wrap icon-amber">
+          <i class="fa-solid fa-ticket-simple"></i>
+        </div>
+        <span class="badge-token" id="compTokenBadge">TICKET: SN-TKT-9042</span>
+        <h3 id="compSuccessTitle">Maintenance Ticket Created!</h3>
+        <p class="modal-lead">Your grievance has been logged and assigned to our residence support desk.</p>
+        
+        <div class="receipt-summary-card">
+          <div class="receipt-row">
+            <span>Resident Name:</span>
+            <strong id="compConfirmedName">Ananya Roy</strong>
+          </div>
+          <div class="receipt-row">
+            <span>Room Number:</span>
+            <strong id="compConfirmedRoom">A-204</strong>
+          </div>
+          <div class="receipt-row">
+            <span>Category:</span>
+            <strong id="compConfirmedCat">Electricity &amp; AC</strong>
+          </div>
+          <div class="receipt-row">
+            <span>Status:</span>
+            <strong class="text-amber">Assigned to Warden Desk</strong>
+          </div>
+        </div>
+
+        <div class="modal-demo-alert">
+          <i class="fa-solid fa-database"></i>
+          <span>This complaint token has been saved to your browser's localStorage. You can track its live status at any time in the Support section.</span>
+        </div>
+
+        <div class="modal-btn-row">
+          <button class="btn btn-outline-emerald" id="viewTrackTicketBtn">
+            <i class="fa-solid fa-magnifying-glass"></i> Track This Ticket Now
+          </button>
+          <button class="btn btn-emerald" id="closeComplaintOkBtn">
+            <i class="fa-solid fa-check"></i> Done
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- GALLERY LIGHTBOX MODAL -->
+  <div class="lightbox-overlay" id="galleryLightbox" aria-hidden="true" role="dialog" aria-label="Image Lightbox">
+    <button class="lightbox-close" id="closeLightboxBtn" aria-label="Close image lightbox">
+      <i class="fa-solid fa-xmark"></i>
+    </button>
+    <button class="lightbox-nav-btn btn-prev" id="lightboxPrevBtn" aria-label="Previous photo">
+      <i class="fa-solid fa-chevron-left"></i>
+    </button>
+    <div class="lightbox-container">
+      <img src="" alt="Enlarged gallery photo" id="lightboxImg">
+      <div class="lightbox-caption">
+        <span class="lightbox-tag" id="lightboxTag">Tag</span>
+        <h4 id="lightboxTitle">Title</h4>
+        <p id="lightboxDesc">Description</p>
+      </div>
+    </div>
+    <button class="lightbox-nav-btn btn-next" id="lightboxNextBtn" aria-label="Next photo">
+      <i class="fa-solid fa-chevron-right"></i>
+    </button>
+  </div>
+
+  <!-- Main JavaScript File -->
+  <script src="script.js"></script>
+</body>
+</html>
